@@ -1,0 +1,116 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: relative;
+
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+.attribution a {}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Figtree', sans-serif;
+    background-color: hsl(47, 88%, 63%);
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 380px;
+    min-height: 100vh;
+    padding: 0;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.wrap-card {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 20px;
+    background-color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 7%);
+    box-shadow: 7px 7px 0px 0px hsl(0, 0%, 7%);
+    font-size: 16px;
+
+    .wrap-img {
+        width: 100%;
+        height: 201px;
+        border-radius: 10px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .wrap-content {
+        margin-top: 20px;
+        color: hsl(0, 0%, 7%);
+    }
+}
+
+.wrap-card .wrap-card .wrap-content .wrap-tag .tag-item {
+    width: max-content;
+    font-weight: bold;
+    background-color: hsl(47, 88%, 63%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    display: flex;
+    color: hsl(0, 0%, 7%);
+    text-decoration: none;
+}
+
+.wrap-card .wrap-content .wrap-info {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.wrap-card .wrap-content .wrap-title {
+    margin-top: 20px;
+    font-weight: 800;
+    font-size: 1.3em;
+    display: flex;
+    color: hsl(0, 0%, 7%);
+    text-decoration: none;
+    width: max-content;
+}
+
+.wrap-card .wrap-content .wrap-description {
+    margin-top: 20px;
+    color: hsl(0, 0%, 50%);
+    font-size: 1em;
+}
+
+.wrap-card .wrap-content .wrap-info-with-thumb {
+    margin-top: 20px;
+    font-weight: 800;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    color: hsl(0, 0%, 7%);
+    text-decoration: none;
+    width: max-content;
+}
+
+.wrap-card .wrap-content .wrap-info-with-thumb img {
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+}

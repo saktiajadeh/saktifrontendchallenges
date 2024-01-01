@@ -1,0 +1,24 @@
+.styled-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li{
+        margin-bottom: 10px;
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+        a{
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            &:hover{
+                color: #2074a0;
+            }
+        }
+    }
+}

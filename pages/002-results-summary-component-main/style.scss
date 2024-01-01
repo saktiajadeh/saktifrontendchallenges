@@ -1,0 +1,103 @@
+.attribution {
+    margin: 20px 0;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    background-color: hsl(0, 0%, 100%);
+}
+
+@media (min-width: 576px){
+    .container{
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0;
+    margin: auto;
+}
+
+.wrap-card {
+    max-width: 600px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 7px 10px 48px -20px hsla(224, 30%, 27%, 50%);
+    border-radius: 20px;
+}
+
+.wrap-card .wrap-result {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    background: linear-gradient(0deg, hsl(241, 81%, 54%) 0%, hsl(252, 100%, 67%) 125%, hsl(241, 81%, 54%) 100%);
+    padding: 40px 20px;
+}
+
+.wrap-card .wrap-result .wrap-info {
+    font-size: 1.1em;
+    color: hsla(0, 0%, 100%, 60%);
+}
+
+.wrap-card .wrap-result .wrap-result-info {
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, hsla(256, 72%, 46%, 1) 0%, hsla(241, 72%, 46%, 0) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.wrap-card .wrap-result .wrap-result-info span.highlight{
+    font-size: 3em;
+    color: hsla(0, 0%, 100%, 100%);
+    font-weight: 800;
+}
+
+.wrap-card .wrap-result .wrap-result-info span.info{
+    font-size: 0.8em;
+    color: hsla(0, 0%, 100%, 40%);
+}
+
+.wrap-card .wrap-result .wrap-title {
+    margin-top: 20px;
+    font-size: 1.3em;
+    color: hsla(0, 0%, 100%, 100%);
+    font-weight: 500;
+}
+
+.wrap-card .wrap-result .wrap-description {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: hsla(0, 0%, 100%, 60%);
+    text-align: center;
+}
+
+.wrap-card .wrap-summary {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
