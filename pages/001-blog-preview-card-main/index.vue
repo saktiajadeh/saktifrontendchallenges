@@ -28,10 +28,6 @@
                 </div>
             </div>
         </div>
-        <div class="attribution">
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-            Coded by <a href="https://github.com/saktiajadeh">Sakti</a>.
-        </div>
     </div>
 </template>
 
@@ -39,5 +35,8 @@
     @import'./style.scss';
 </style>
 
-<script>
+<script setup>
+    useHead({
+        title: '001 Blog Preview Card',
+    })
 </script>

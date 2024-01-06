@@ -1,9 +1,13 @@
 <template>
     <div class="body">
         <ul class="styled-list">
-            <li><NuxtLink to="/001-blog-preview-card-main">001-blog-preview-card-main</NuxtLink></li>
-            <li><NuxtLink to="/002-results-summary-component-main">002-results-summary-component-main</NuxtLink></li>
+            <li><NuxtLink to="/001-blog-preview-card-main">001 Blog Preview Card</NuxtLink></li>
+            <li><NuxtLink to="/002-results-summary-component-main">002 Results Summary Component</NuxtLink></li>
         </ul>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="https://github.com/saktiajadeh">Sakti</a>.
+        </div>
     </div>
 </template>
 
@@ -11,5 +15,8 @@
     @import './style.scss';
 </style>
 
-<script>
+<script setup>
+    useHead({
+        title: 'Sakti Frontend Challenges',
+    })
 </script>
