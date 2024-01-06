@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+$lightred: hsl(0, 100%, 67%);
+$lightred10: hsla(0, 100%, 67%, 10%);
+$orangeyellow: hsl(39, 100%, 56%);
+$orangeyellow10: hsla(39, 100%, 56%, 10%);
+$greenteal: hsl(166, 100%, 37%);
+$greenteal10: hsla(166, 100%, 37%, 10%);
+$cobaltblue: hsl(234, 85%, 45%);
+$cobaltblue10: hsla(234, 85%, 45%, 10%);
+
+$primaryTransition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
 .attribution {
     margin: 20px 0;
     font-size: 11px;
@@ -21,85 +32,181 @@
     background-color: hsl(0, 0%, 100%);
 }
 
-@media (min-width: 576px){
-    .container{
-    }
-}
-
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    padding: 0;
+    padding: 0 0;
     margin: auto;
+    transition: $primaryTransition;
+    .wrap-card {
+        width: 100%;
+        max-width: 600px;
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 7px 10px 48px -20px hsla(224, 30%, 27%, 50%);
+        overflow: hidden;
+        transition: $primaryTransition;
+        .wrap-result {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(0deg, hsl(241, 81%, 54%) 0%, hsl(252, 100%, 67%) 125%, hsl(241, 81%, 54%) 100%);
+            padding: 40px 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            transition: $primaryTransition;
+            .wrap-info {
+                font-size: 1.1em;
+                color: hsla(0, 0%, 100%, 60%);
+            }
+            .wrap-result-info {
+                margin-top: 20px;
+                width: 125px;
+                height: 125px;
+                background: linear-gradient(45deg, hsla(256, 72%, 46%, 1) 0%, hsla(241, 72%, 46%, 0) 100%);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                transition: $primaryTransition;
+                span.highlight{
+                    font-size: 3em;
+                    color: hsla(0, 0%, 100%, 100%);
+                    font-weight: 800;
+                }
+                span.info{
+                    font-size: 0.8em;
+                    color: hsla(0, 0%, 100%, 40%);
+                }
+            }
+            .wrap-title {
+                margin-top: 20px;
+                font-size: 1.3em;
+                color: hsla(0, 0%, 100%, 100%);
+                font-weight: 500;
+            }
+            .wrap-description {
+                margin-top: 20px;
+                font-size: 0.8em;
+                color: hsla(0, 0%, 100%, 60%);
+                text-align: center;
+            }
+        }
+    
+        .wrap-summary {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #fff;
+            padding: 20px;
+            transition: $primaryTransition;
+            .wrap-title {
+                font-size: 1.3em;
+                color: hsl(224, 30%, 27%);
+                font-weight: 500;
+            }
+            .wrap-result-list{
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+                .result-item{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    padding: 10px;
+                    background:  #ddd;
+                    margin-bottom: 15px;
+                    border-radius: 7px;
+                    font-size: 0.8em;
+                    &:nth-last-of-type(1){
+                        margin-bottom: 0;
+                    }
+                    &.lightred{
+                        background: $lightred10;
+                        .left{
+                            color: $lightred;
+                        }
+                    }
+                    &.orangeyellow{
+                        background:  $orangeyellow10;
+                        .left{
+                            color: $orangeyellow;
+                        }
+                    }
+                    &.greenteal{
+                        background:  $greenteal10;
+                        .left{
+                            color: $greenteal;
+                        }
+                    }
+                    &.cobaltblue{
+                        background:  $cobaltblue10;
+                        .left{
+                            color: $cobaltblue;
+                        }
+                    }
+                    .left{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img{
+                            width: 20px;
+                            height: 20px;
+                            object-fit: contain;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-right: 10px;
+                        }
+    
+                    }
+                }
+            }
+            .wrap-action{
+                margin-top: 30px;
+                .wrap-button{
+                    color: hsl(0, 0%, 100%);
+                    background-color: hsl(224, 30%, 27%);
+                    text-decoration: none;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 20px;
+                    padding: 10px;
+                    text-align: center;
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
 }
 
-.wrap-card {
-    max-width: 600px;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 7px 10px 48px -20px hsla(224, 30%, 27%, 50%);
-    border-radius: 20px;
-}
-
-.wrap-card .wrap-result {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    border-radius: 20px;
-    background: linear-gradient(0deg, hsl(241, 81%, 54%) 0%, hsl(252, 100%, 67%) 125%, hsl(241, 81%, 54%) 100%);
-    padding: 40px 20px;
-}
-
-.wrap-card .wrap-result .wrap-info {
-    font-size: 1.1em;
-    color: hsla(0, 0%, 100%, 60%);
-}
-
-.wrap-card .wrap-result .wrap-result-info {
-    margin-top: 20px;
-    width: 150px;
-    height: 150px;
-    background: linear-gradient(45deg, hsla(256, 72%, 46%, 1) 0%, hsla(241, 72%, 46%, 0) 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.wrap-card .wrap-result .wrap-result-info span.highlight{
-    font-size: 3em;
-    color: hsla(0, 0%, 100%, 100%);
-    font-weight: 800;
-}
-
-.wrap-card .wrap-result .wrap-result-info span.info{
-    font-size: 0.8em;
-    color: hsla(0, 0%, 100%, 40%);
-}
-
-.wrap-card .wrap-result .wrap-title {
-    margin-top: 20px;
-    font-size: 1.3em;
-    color: hsla(0, 0%, 100%, 100%);
-    font-weight: 500;
-}
-
-.wrap-card .wrap-result .wrap-description {
-    margin-top: 20px;
-    font-size: 0.8em;
-    color: hsla(0, 0%, 100%, 60%);
-    text-align: center;
-}
-
-.wrap-card .wrap-summary {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
+@media (min-width: 576px){
+    .container{
+        min-height: 100vh;
+        padding: 0 20px;
+        .wrap-card{
+            border-radius: 20px;
+            flex-direction: row;
+            .wrap-result{
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                .wrap-result-info {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+            .wrap-summary{
+                padding: 40px 20px;
+            }
+        }
+    }
 }

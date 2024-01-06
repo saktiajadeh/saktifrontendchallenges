@@ -22,21 +22,52 @@
                     </div>
                 </div>
                 <div class="wrap-summary">
-                    Summary
-
-                    Reaction
-                    80 / 100
-
-                    Memory
-                    92 / 100
-
-                    Verbal
-                    61 / 100
-
-                    Visual
-                    72 / 100
-
-                    Continue
+                    <div class="wrap-title">
+                        Summary
+                    </div>
+                    <div class="wrap-result-list">
+                        <div class="result-item lightred">
+                            <div class="left">
+                                <img src=".\assets\images\icon-reaction.svg" alt="">
+                                Reaction
+                            </div>
+                            <div class="right">
+                                <strong>80</strong> / 100
+                            </div>
+                        </div>
+                        <div class="result-item orangeyellow">
+                            <div class="left">
+                                <img src=".\assets\images\icon-memory.svg" alt="">
+                                Memory
+                            </div>
+                            <div class="right">
+                                <strong>92</strong> / 100
+                            </div>
+                        </div>
+                        <div class="result-item greenteal">
+                            <div class="left">
+                                <img src=".\assets\images\icon-verbal.svg" alt="">
+                                Verbal
+                            </div>
+                            <div class="right">
+                                <strong>61</strong> / 100
+                            </div>
+                        </div>
+                        <div class="result-item cobaltblue">
+                            <div class="left">
+                                <img src=".\assets\images\icon-visual.svg" alt="">
+                                Visual
+                            </div>
+                            <div class="right">
+                                <strong>72</strong> / 100
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap-action">
+                        <a href="https://www.google.com/" target="_blank" class="wrap-button">
+                            Continue
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
