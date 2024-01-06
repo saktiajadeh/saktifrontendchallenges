@@ -5,6 +5,7 @@
                 <li><NuxtLink to="/001-blog-preview-card">001 Blog Preview Card</NuxtLink></li>
                 <li><NuxtLink to="/002-results-summary-component">002 Results Summary Component</NuxtLink></li>
                 <li><NuxtLink to="/003-product-preview-card-component">003 Product preview card component</NuxtLink></li>
+                <li><NuxtLink to="/004-product-preview-card-component">004 QR code component</NuxtLink></li>
             </ul>
             <div class="attribution">
                 Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

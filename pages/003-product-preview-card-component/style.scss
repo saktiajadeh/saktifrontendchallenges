@@ -66,7 +66,7 @@ $primaryTransition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             }
             .wrap-title {
                 font-family: 'Fraunces', sans-serif;
-                margin-top: 15px;
+                margin-top: 20px;
                 font-weight: 700;
                 font-size: 2.2em;
                 display: flex;
@@ -74,14 +74,14 @@ $primaryTransition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
                 text-decoration: none;
             }
             .wrap-description {
-                margin-top: 15px;
+                margin-top: 20px;
                 color: hsl(228, 12%, 48%);
                 font-size: 1em;
                 font-weight: 500;
             }
             .wrap-price{
                 font-family: 'Fraunces', sans-serif;
-                margin-top: 15px;
+                margin-top: 20px;
                 color: #117b4b;
                 display: flex;
                 align-items: center;
@@ -100,7 +100,7 @@ $primaryTransition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
                 }
             }
             .wrap-action{
-                margin-top: 15px;
+                margin-top: 20px;
                 .wrap-button{
                     color: hsl(0, 0%, 100%);
                     background-color: #117b4b;
@@ -137,7 +137,7 @@ $primaryTransition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     .container{
         min-height: 100vh;
         padding: 20px;
-        max-width: 573px;
+        max-width: 600px;
         .wrap-card{
             flex-direction: row;
             .wrap-img{
