@@ -3,7 +3,7 @@
       <div class="container">
           <div class="wrap-card">
               <div class="wrap-img">
-                  <img src=".\images\image-product-desktop.jpg" alt="Image QR Code">
+                  <img src=".\images\image-qr-code.png" alt="Image QR Code">
               </div>
               <div class="wrap-content">
                   <div class="wrap-title">
