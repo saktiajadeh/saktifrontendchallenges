@@ -1,46 +1,44 @@
 <template>
     <div class="body">
+        <div class="bg-pattern-1">
+            <img src=".\images\pattern-background-desktop.svg" alt="BG Pattern 1">
+        </div>
+        <div class="bg-pattern-2">
+            
+        </div>
         <div class="container">
             <div class="wrap-card">
-                <a href="https://www.google.com/" target="_blank" class="wrap-img">
-                    <img src=".\images\image-equilibrium.jpg" alt="Image Product">
-                    <div class="active-states">
-                        <img src=".\images\icon-view.svg" alt="Icon View">
-                    </div>
-                </a>
+                <div class="wrap-img">
+                    <img src=".\images\illustration-hero.svg" alt="Image Product">
+                </div>
                 <div class="wrap-content">
-                    <a href="https://www.google.com/" target="_blank" class="wrap-title">
+                    <div class="wrap-title">
                         Order Summary
-                    </a>
+                    </div>
                     <div class="wrap-description">
-
                         You can now listen to millions of songs, audiobooks, and podcasts on any
                         device anywhere you like!
-
-                        Annual Plan
-                        $59.99/year
-
-                        Change
-
-                        Proceed to Payment
-                        Cancel Order
                     </div>
                     <div class="wrap-price-with-icon">
-                        <span class="show-price">
-                            <img src=".\images\icon-ethereum.svg" alt="">
-                            0.041 ETH
-                        </span>
-                        <span class="show-info">
-                            <img src=".\images\icon-clock.svg" alt="">
-                            3 days left
-                        </span>
+                        <div class="show-price">
+                            <img src=".\images\icon-music.svg" alt="">
+                            <div>
+                                <span>Annual Plan</span>
+                                <span>$59.99/year</span>
+                            </div>
+                        </div>
+                        <a href="https://www.google.com/" target="_blank" class="show-info">
+                            Change
+                        </a>
                     </div>
-                    <div class="separator"></div>
-                    <a href="https://www.google.com/" target="_blank" class="wrap-info-with-thumb">
-                        <img src=".\images\image-avatar.png" alt="">
-                        <span>Creation of</span>&nbsp;
-                        <span class="name">Jules Wyvern</span>
-                    </a>
+                    <div class="wrap-action">
+                        <a href="https://www.google.com/" target="_blank" class="wrap-button primary">
+                            <span>Proceed to Payment</span>
+                        </a>
+                        <a href="https://www.google.com/" target="_blank" class="wrap-button cancel">
+                            <span>Cancel Order</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

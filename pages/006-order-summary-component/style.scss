@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"');
+
+$primaryTransition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$paleblue: hsl(225, 100%, 94%);
+$brightblue: hsl(245, 75%, 52%);
+$brightblue50: hsl(245, 75%, 52%, 50%);
+$verypaleblue: hsl(225, 100%, 98%);
+$desaturedblue: hsl(224, 23%, 55%);
+$darkblue: hsl(223, 47%, 23%);
+$darkblue50: hsl(223, 47%, 23%, 50%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color:  $paleblue;
+    position: relative;
+}
+
+.bg-pattern-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    img{
+        width: 100%;
+        height: 50%;
+        max-height: 430px;
+        object-fit: cover;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    .wrap-card{
+        width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        background-color: $verypaleblue;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        transition: $primaryTransition;
+        .wrap-img{
+            overflow: hidden;
+            height: 200px;
+            transition: $primaryTransition;
+            position: relative;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .wrap-content{
+            padding: 30px;
+            transition: $primaryTransition;
+            .wrap-title {
+                font-weight: 700;
+                font-size: 1.4em;
+                text-align: center;
+                text-decoration: none;
+                transition: $primaryTransition;
+                color: $darkblue;
+            }
+            .wrap-description {
+                margin-top: 20px;
+                font-size: 1em;
+                font-weight: 500;
+                text-align: center;
+                color: $darkblue50;
+            }
+            .wrap-price-with-icon{
+                margin-top: 40px;
+                font-size: 1em;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                .show-price{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    > div{
+                        display: flex;
+                        flex-direction: column;
+                        span{
+                            &:first-of-type{
+                                color: $darkblue;
+                                font-weight: 700;
+                            }
+                            &:nth-last-of-type(1){
+                                color: $darkblue50;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                    img{
+                        width: 46px;
+                        height: 46px;
+                        object-fit: cover;
+                        overflow: hidden;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 10px;
+                    }
+                }
+                .show-info{
+                    color: $brightblue;
+                    font-weight: 500;
+                    font-size: 0.9em;
+                    transition: $primaryTransition;
+                    &:hover{
+                        text-decoration: none;
+                        color: $brightblue50;
+                    }
+                }
+            }
+            .wrap-action{
+                margin-top: 40px;
+                .wrap-button{
+                    text-decoration: none;
+                    width: 100%;
+                    min-height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 7px;
+                    padding: 12.5px 10px;
+                    text-align: center;
+                    font-size: 0.9em;
+                    font-weight: 700;
+                    transition: $primaryTransition;
+                    margin-bottom: 10px;
+                    img{
+                        width: 16px;
+                        height: 16px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 15px;
+                    }
+                    &.primary{
+                        background-color: $brightblue;
+                        color: $paleblue;
+                        box-shadow: 0px 9px 21px -11px $brightblue50;
+                        &:hover{
+                            background-color: $brightblue50;
+                        }
+                    }
+                    &.cancel{
+                        color: $darkblue50;
+                        &:hover{
+                            color: $darkblue;
+                        }
+                    }
+                    &:nth-last-of-type(1){
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px){
+    .container{
+        min-height: 100vh;
+        padding: 20px;
+        max-width: 450px;
+        .wrap-card{
+            .wrap-content{
+                padding: 40px;
+            }
+        }
+    }
+}
