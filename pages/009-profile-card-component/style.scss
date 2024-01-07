@@ -1,6 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 $primaryTransition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$darkcyan: hsl(185, 75%, 39%);
+$verydarkdesaturatedblue: hsl(229, 23%, 23%);
+$darkgrayishblue: hsl(227, 10%, 46%);
+$darkgray: hsl(0, 0%, 59%);
+$white: hsl(0, 0%, 100%);
 
 * {
     margin: 0;
@@ -9,8 +14,43 @@ $primaryTransition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .body {
-    font-family: 'Outfit', sans-serif;
-    background-color:  hsla(218, 44%, 22%, 20%);
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color:  $darkcyan;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-pattern-1{
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    right: -10%;
+    bottom: -10%;
+    img{
+        width: 50%;
+        height: 50%;
+        max-height: 430px;
+        object-fit: cover;
+        object-position: bottom right;
+    }
+}
+
+.bg-pattern-2{
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    right: -10%;
+    bottom: -10%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    img{
+        width: 50%;
+        height: 50%;
+        max-height: 430px;
+        object-fit: cover;
+        object-position: top left;
+    }
 }
 
 .container {
@@ -22,21 +62,20 @@ $primaryTransition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     padding: 20px;
     margin: auto;
     overflow: hidden;
+    position: relative;
     .wrap-card{
         width: 100%;
         border-radius: 20px;
         overflow: hidden;
-        background-color: hsl(0, 0%, 100%);
-        font-size: 15px;
+        background-color: $white;
+        font-size: 18px;
         display: flex;
         flex-direction: column;
         transition: $primaryTransition;
-        padding: 20px;
         .wrap-img{
             overflow: hidden;
-            height: 320px;
+            height: 150px;
             transition: $primaryTransition;
-            border-radius: 10px;
             img{
                 width: 100%;
                 height: 100%;
@@ -44,22 +83,74 @@ $primaryTransition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             }
         }
         .wrap-content{
-            padding: 20px;
             transition: $primaryTransition;
-            .wrap-title {
-                font-weight: 700;
-                font-size: 1.5em;
+            .wrap-profile{
                 display: flex;
-                color: hsl(218, 44%, 22%);
+                align-items: center;
+                justify-content: center;
+                margin: auto;
+                margin-top: -48px;
+                width: 96px;
+                height: 96px;
+                overflow: hidden;
+                border-radius: 50%;
+                border: 3px solid $white;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .wrap-title {
+                margin-top: 20px;
+                font-weight: 400;
+                font-size: 1em;
+                color: $darkgray;
                 text-decoration: none;
                 text-align: center;
+                padding: 0 20px;
+                .highlight{
+                    color: $verydarkdesaturatedblue;
+                    font-weight: 700;
+                }
             }
             .wrap-description {
-                margin-top: 20px;
-                color: hsl(228, 12%, 48%);
-                font-size: 1em;
+                color: $darkgray;
+                font-size: 0.8em;
                 text-align: center;
                 font-weight: 400;
+                padding: 0 20px;
+            }
+            .separator{
+                margin: 20px 0;
+                width: 100%;
+                height: 1px;
+                background-color: $darkgray;
+                opacity: 0.3;
+            }
+            .wrap-stats{
+                padding: 0 20px 20px 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                flex-direction: row;
+                .stats-item{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    > div{
+                        &.title{
+                            color: $verydarkdesaturatedblue;
+                            font-size: 0.9em;
+                            font-weight: 700;
+                        }
+                        &.desc{
+                            color: $darkgray;
+                            font-size: 0.7em;
+                            font-weight: 400;
+                        }
+                    }
+                }
             }
         }
     }
