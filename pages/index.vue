@@ -8,6 +8,7 @@
                 <li><NuxtLink to="/004-qr-code-component">004 QR code component</NuxtLink></li>
                 <li><NuxtLink to="/005-nft-preview-card-component">005 NFT preview card component</NuxtLink></li>
                 <li><NuxtLink to="/006-order-summary-component">006 Order summary component</NuxtLink></li>
+                <li><NuxtLink to="/007-stats-preview-card-component">007 Stats preview card component</NuxtLink></li>
             </ul>
             <div class="attribution">
                 Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
