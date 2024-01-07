@@ -186,19 +186,10 @@ $verylightgray: hsl(0, 0%, 95%);
         max-width: 900px;
         flex-direction: row;
         .container-card{
-            display: flex;
-            min-height: 500px;
             .wrap-card{
-                width: calc(100% / 3);
                 &:first-of-type{
-                    border-top-right-radius: 0;
-                    border-top-left-radius: 10px;
-                    border-bottom-left-radius: 10px;
                 }
                 &:nth-last-of-type(1){
-                    border-top-right-radius: 10px;
-                    border-bottom-right-radius: 10px;
-                    border-bottom-left-radius: 0;
                 }
             }
         }
