@@ -1,49 +1,33 @@
 <template>
   <div class="body">
-      <div class="bg-pattern-1">
-          <img src=".\images\pattern-background-desktop.svg" alt="BG Pattern 1">
-      </div>
-      <div class="bg-pattern-2">
-          
-      </div>
       <div class="container">
           <div class="wrap-card">
               <div class="wrap-img">
-                  <img src=".\images\illustration-hero.svg" alt="Image Product">
+                  <img src=".\images\image-header-desktop.jpg" alt="Image Preview">
+                    <div class="active-states">
+                    </div>
               </div>
               <div class="wrap-content">
                   <div class="wrap-title">
-                      Order Summary
+                    Get <span class="accent">insights</span> that help your business grow.
                   </div>
                   <div class="wrap-description">
-                    Get insights that help your business grow.
-
                     Discover the benefits of data analytics and make better decisions regarding revenue, customer 
                     experience, and overall efficiency.
-
-                    10k+ companies
-                    314 templates
-                    12m+ queries
                   </div>
-                  <div class="wrap-price-with-icon">
-                      <div class="show-price">
-                          <img src=".\images\icon-music.svg" alt="">
-                          <div>
-                              <span>Annual Plan</span>
-                              <span>$59.99/year</span>
-                          </div>
-                      </div>
-                      <a href="https://www.google.com/" target="_blank" class="show-info">
-                          Change
-                      </a>
-                  </div>
-                  <div class="wrap-action">
-                      <a href="https://www.google.com/" target="_blank" class="wrap-button primary">
-                          <span>Proceed to Payment</span>
-                      </a>
-                      <a href="https://www.google.com/" target="_blank" class="wrap-button cancel">
-                          <span>Cancel Order</span>
-                      </a>
+                  <div class="wrap-stats">
+                    <div class="stats-item">
+                      <div class="title">10k+</div>
+                      <div class="desc">companies</div>
+                    </div>
+                    <div class="stats-item">
+                      <div class="title">314</div>
+                      <div class="desc">templates</div>
+                    </div>
+                    <div class="stats-item">
+                      <div class="title">12m+</div>
+                      <div class="desc">queries</div>
+                    </div>
                   </div>
               </div>
           </div>

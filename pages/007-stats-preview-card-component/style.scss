@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 $primaryTransition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-$paleblue: hsl(225, 100%, 94%);
-$brightblue: hsl(245, 75%, 52%);
-$brightblue50: hsl(245, 75%, 52%, 50%);
-$verypaleblue: hsl(225, 100%, 98%);
-$desaturedblue: hsl(224, 23%, 55%);
-$darkblue: hsl(223, 47%, 23%);
-$darkblue50: hsl(223, 47%, 23%, 50%);
+
+$verydarkblue: hsl(233, 47%, 7%);
+$darkdesaturatedblue: hsl(244, 38%, 16%);
+$softviolet: hsl(277, 64%, 61%);
+
+$white: hsl(0, 0%, 100%);
+$white75: hsla(0, 0%, 100%, 0.75);
+$white60: hsla(0, 0%, 100%, 0.60);
 
 * {
     margin: 0;
@@ -16,23 +18,9 @@ $darkblue50: hsl(223, 47%, 23%, 50%);
 }
 
 .body {
-    font-family: 'Red Hat Display', sans-serif;
-    background-color:  $paleblue;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color:  $verydarkblue;
     position: relative;
-}
-
-.bg-pattern-1{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    img{
-        width: 100%;
-        height: 50%;
-        max-height: 430px;
-        object-fit: cover;
-    }
 }
 
 .container {
@@ -49,123 +37,77 @@ $darkblue50: hsl(223, 47%, 23%, 50%);
         width: 100%;
         border-radius: 20px;
         overflow: hidden;
-        background-color: $verypaleblue;
-        font-size: 16px;
+        background-color: $darkdesaturatedblue;
+        font-size: 15px;
         display: flex;
         flex-direction: column;
         transition: $primaryTransition;
         .wrap-img{
             overflow: hidden;
-            height: 200px;
+            height: 220px;
             transition: $primaryTransition;
             position: relative;
             img{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                object-position: top;
+            }
+            .active-states{
+                background-color: $softviolet;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: $primaryTransition;
+                opacity: 0.5;
             }
         }
         .wrap-content{
             padding: 30px;
             transition: $primaryTransition;
             .wrap-title {
+                font-family: 'Inter', sans-serif;
                 font-weight: 700;
-                font-size: 1.4em;
+                font-size: 1.8em;
                 text-align: center;
                 text-decoration: none;
                 transition: $primaryTransition;
-                color: $darkblue;
+                color: $white;
+                .accent{
+                    color: $softviolet;
+                }
             }
             .wrap-description {
                 margin-top: 20px;
                 font-size: 1em;
-                font-weight: 500;
                 text-align: center;
-                color: $darkblue50;
+                color: $white75;
             }
-            .wrap-price-with-icon{
-                margin-top: 40px;
-                font-size: 1em;
+            .wrap-stats{
+                margin-top: 20px;
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
-                flex-wrap: wrap;
-                .show-price{
+                justify-content: space-between;
+                flex-direction: column;
+                .stats-item{
+                    margin-bottom: 20px;
                     display: flex;
-                    justify-content: center;
+                    flex-direction: column;
                     align-items: center;
                     > div{
-                        display: flex;
-                        flex-direction: column;
-                        span{
-                            &:first-of-type{
-                                color: $darkblue;
-                                font-weight: 700;
-                            }
-                            &:nth-last-of-type(1){
-                                color: $darkblue50;
-                                font-weight: 500;
-                            }
+                        &.title{
+                            font-size: 1.4em;
+                            font-weight: 700;
+                            color: $white;
                         }
-                    }
-                    img{
-                        width: 46px;
-                        height: 46px;
-                        object-fit: cover;
-                        overflow: hidden;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        margin-right: 10px;
-                    }
-                }
-                .show-info{
-                    color: $brightblue;
-                    font-weight: 500;
-                    font-size: 0.9em;
-                    transition: $primaryTransition;
-                    &:hover{
-                        text-decoration: none;
-                        color: $brightblue50;
-                    }
-                }
-            }
-            .wrap-action{
-                margin-top: 40px;
-                .wrap-button{
-                    text-decoration: none;
-                    width: 100%;
-                    min-height: 40px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 7px;
-                    padding: 12.5px 10px;
-                    text-align: center;
-                    font-size: 0.9em;
-                    font-weight: 700;
-                    transition: $primaryTransition;
-                    margin-bottom: 10px;
-                    img{
-                        width: 16px;
-                        height: 16px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin-right: 15px;
-                    }
-                    &.primary{
-                        background-color: $brightblue;
-                        color: $paleblue;
-                        box-shadow: 0px 9px 21px -11px $brightblue50;
-                        &:hover{
-                            background-color: $brightblue50;
-                        }
-                    }
-                    &.cancel{
-                        color: $darkblue50;
-                        &:hover{
-                            color: $darkblue;
+                        &.desc{
+                            text-transform: uppercase;
+                            color: $white75;
                         }
                     }
                     &:nth-last-of-type(1){
@@ -181,10 +123,47 @@ $darkblue50: hsl(223, 47%, 23%, 50%);
     .container{
         min-height: 100vh;
         padding: 20px;
-        max-width: 450px;
+        max-width: 900px;
         .wrap-card{
+            flex-direction: row-reverse;
+            .wrap-img{
+                width: 50%;
+                height: auto;
+                img{
+                    object-position: left;
+                }
+            }
             .wrap-content{
+                width: 50%;
                 padding: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .wrap-title{
+                    text-align: left;
+                }
+                .wrap-description{
+                    text-align: left;
+                }
+                .wrap-stats{
+                    flex-direction: row;
+                    align-items: flex-start;
+                    .stats-item{
+                        width: calc(33.33% - 10px);
+                        margin-bottom: 0;
+                        margin-right: 10px;
+                        align-items: flex-start;
+                        &:nth-last-of-type(1){
+                            margin-bottom: 0;
+                            margin-right: 0;
+                        }
+                        > div {
+                            &.desc{
+                                line-break: anywhere;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
