@@ -1,15 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 $primaryTransition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 $verydarkblue: hsl(233, 47%, 7%);
 $darkdesaturatedblue: hsl(244, 38%, 16%);
 $softviolet: hsl(277, 64%, 61%);
+$white60: hsla(0, 0%, 100%, 0.60);
 
+$brightorange: hsl(31, 77%, 52%);
+$darkcyan: hsl(184, 100%, 22%);
+$verydarkcyan: hsl(179, 100%, 13%);
 $white: hsl(0, 0%, 100%);
 $white75: hsla(0, 0%, 100%, 0.75);
-$white60: hsla(0, 0%, 100%, 0.60);
+$verylightgray: hsl(0, 0%, 95%);
 
 * {
     margin: 0;
@@ -19,7 +23,7 @@ $white60: hsla(0, 0%, 100%, 0.60);
 
 .body {
     font-family: 'Lexend Deca', sans-serif;
-    background-color:  $verydarkblue;
+    background-color:  $verylightgray;
     position: relative;
 }
 
@@ -27,91 +31,147 @@ $white60: hsla(0, 0%, 100%, 0.60);
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 100%;
     min-height: 100vh;
     padding: 20px;
     margin: auto;
     overflow: hidden;
     position: relative;
-    .wrap-card{
-        width: 100%;
-        border-radius: 20px;
-        overflow: hidden;
-        background-color: $darkdesaturatedblue;
-        font-size: 15px;
-        display: flex;
-        flex-direction: column;
-        transition: $primaryTransition;
-        .wrap-img{
+    .container-card{
+        .wrap-card{
+            width: 100%;
             overflow: hidden;
-            height: 220px;
-            transition: $primaryTransition;
-            position: relative;
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: top;
+            font-size: 15px;
+            display: flex;
+            padding: 30px 20px;
+            &:first-of-type{
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
             }
-            .active-states{
-                background-color: $softviolet;
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: $primaryTransition;
-                opacity: 0.5;
+            &:nth-last-of-type(1){
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
             }
-        }
-        .wrap-content{
-            padding: 30px;
-            transition: $primaryTransition;
-            .wrap-title {
-                font-family: 'Inter', sans-serif;
-                font-weight: 700;
-                font-size: 1.8em;
-                text-align: center;
-                text-decoration: none;
-                transition: $primaryTransition;
-                color: $white;
-                .accent{
-                    color: $softviolet;
-                }
-            }
-            .wrap-description {
-                margin-top: 20px;
-                font-size: 1em;
-                text-align: center;
-                color: $white75;
-            }
-            .wrap-stats{
-                margin-top: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                flex-direction: column;
-                .stats-item{
-                    margin-bottom: 20px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    > div{
-                        &.title{
-                            font-size: 1.4em;
-                            font-weight: 700;
-                            color: $white;
-                        }
-                        &.desc{
-                            text-transform: uppercase;
-                            color: $white75;
+            &.brightorange{
+                background-color: $brightorange;
+                .wrap-content{
+                    .wrap-action{
+                        .wrap-button{
+                            &.primary{
+                                background-color: $white;
+                                color: $brightorange;
+                                border: 1px solid transparent;
+                                &:hover{
+                                    background-color: transparent;
+                                    border: 1px solid $white;
+                                    color: $white;
+                                }
+                            }
                         }
                     }
-                    &:nth-last-of-type(1){
-                        margin-bottom: 0;
+                }
+            }
+            &.darkcyan{
+                background-color: $darkcyan;
+                .wrap-content{
+                    .wrap-action{
+                        .wrap-button{
+                            &.primary{
+                                background-color: $white;
+                                color: $darkcyan;
+                                border: 1px solid transparent;
+                                &:hover{
+                                    background-color: transparent;
+                                    border: 1px solid $white;
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.verydarkcyan{
+                background-color: $verydarkcyan;
+                .wrap-content{
+                    .wrap-action{
+                        .wrap-button{
+                            &.primary{
+                                background-color: $white;
+                                color: $verydarkcyan;
+                                border: 1px solid transparent;
+                                &:hover{
+                                    background-color: transparent;
+                                    border: 1px solid $white;
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .wrap-content{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .wrap-img{
+                    overflow: hidden;
+                    width: 64px;
+                    height: 40px;
+                    position: relative;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                .wrap-title {
+                    margin-top: 30px;
+                    font-family: 'Big Shoulders Display', sans-serif;
+                    font-weight: 700;
+                    font-size: 2.2em;
+                    text-decoration: none;
+                    color: $white;
+                    text-transform: uppercase;
+                    .accent{
+                        color: $softviolet;
+                    }
+                }
+                .wrap-description {
+                    margin-top: 30px;
+                    font-size: 1em;
+                    color: $white75;
+                    font-weight: 300;
+                }
+                .wrap-action{
+                    margin-top: 40px;
+                    .wrap-button{
+                        text-decoration: none;
+                        width: 100%;
+                        min-height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 20px;
+                        padding: 12.5px 10px;
+                        text-align: center;
+                        font-size: 0.9em;
+                        font-weight: 400;
+                        transition: $primaryTransition;
+                        margin-bottom: 10px;
+                        width: max-content;
+                        min-width: 135px;
+                        img{
+                            width: 16px;
+                            height: 16px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-right: 15px;
+                        }
+                        &:nth-last-of-type(1){
+                            margin-bottom: 0;
+                        }
                     }
                 }
             }
@@ -124,45 +184,21 @@ $white60: hsla(0, 0%, 100%, 0.60);
         min-height: 100vh;
         padding: 20px;
         max-width: 900px;
-        .wrap-card{
-            flex-direction: row-reverse;
-            .wrap-img{
-                width: 50%;
-                height: auto;
-                img{
-                    object-position: left;
+        flex-direction: row;
+        .container-card{
+            display: flex;
+            min-height: 500px;
+            .wrap-card{
+                width: calc(100% / 3);
+                &:first-of-type{
+                    border-top-right-radius: 0;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
                 }
-            }
-            .wrap-content{
-                width: 50%;
-                padding: 40px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                .wrap-title{
-                    text-align: left;
-                }
-                .wrap-description{
-                    text-align: left;
-                }
-                .wrap-stats{
-                    flex-direction: row;
-                    align-items: flex-start;
-                    .stats-item{
-                        width: calc(33.33% - 10px);
-                        margin-bottom: 0;
-                        margin-right: 10px;
-                        align-items: flex-start;
-                        &:nth-last-of-type(1){
-                            margin-bottom: 0;
-                            margin-right: 0;
-                        }
-                        > div {
-                            &.desc{
-                                line-break: anywhere;
-                            }
-                        }
-                    }
+                &:nth-last-of-type(1){
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    border-bottom-left-radius: 0;
                 }
             }
         }
