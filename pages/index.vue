@@ -14,6 +14,7 @@
                 <li><NuxtLink to="/010-social-proof-section">010 Social proof section</NuxtLink></li>
                 <li><NuxtLink to="/011-four-card-feature-section">011 Four card feature section</NuxtLink></li>
                 <li><NuxtLink to="/012-single-price-grid-component">012 Single price grid component</NuxtLink></li>
+                <li><NuxtLink to="/013-huddle-landing-page-with-single-introductory-section">013 Huddle landing page with a single introductory section</NuxtLink></li>
             </ul>
             <div class="attribution">
                 Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
