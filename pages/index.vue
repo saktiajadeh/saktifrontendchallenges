@@ -11,6 +11,7 @@
                 <li><NuxtLink to="/007-stats-preview-card-component">007 Stats preview card component</NuxtLink></li>
                 <li><NuxtLink to="/008-3-column-preview-card-component">008 3-column preview card component</NuxtLink></li>
                 <li><NuxtLink to="/009-profile-card-component">009 Profile card component</NuxtLink></li>
+                <li><NuxtLink to="/010-social-proof-section">010 Social proof section</NuxtLink></li>
                 <li><NuxtLink to="/012-single-price-grid-component">012 Single price grid component</NuxtLink></li>
             </ul>
             <div class="attribution">
