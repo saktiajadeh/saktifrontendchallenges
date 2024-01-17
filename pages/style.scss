@@ -57,6 +57,7 @@ $primaryblue: #37a7e6;
     }
 
     .contain{
+        max-width: 1400px;
         min-height: 100dvh;
         padding: 30px 20px;
         margin: auto;
@@ -101,7 +102,9 @@ $primaryblue: #37a7e6;
                     color: $primaryblack;
                     text-align: left;
                     line-break: anywhere;
+                    transition: $primaryTransition;
                     &:hover{
+                        color: $primaryblue;
                         text-decoration: underline;
                     }
                 }

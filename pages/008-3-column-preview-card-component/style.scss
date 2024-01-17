@@ -33,7 +33,7 @@ $verylightgray: hsl(0, 0%, 95%);
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
     padding: 20px;
     margin: auto;
     overflow: hidden;
@@ -181,7 +181,7 @@ $verylightgray: hsl(0, 0%, 95%);
 
 @media (min-width: 576px){
     .container{
-        min-height: 100vh;
+        min-height: 100dvh;
         padding: 20px;
         max-width: 900px;
         flex-direction: row;

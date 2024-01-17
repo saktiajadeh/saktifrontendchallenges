@@ -30,7 +30,7 @@ $white75: hsla(0, 0%, 100%, 0.75);
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
     padding: 20px;
     margin: auto;
     overflow: hidden;
@@ -165,7 +165,7 @@ $white75: hsla(0, 0%, 100%, 0.75);
 
 @media (min-width: 576px){
     .container{
-        min-height: 100vh;
+        min-height: 100dvh;
         padding: 20px;
         max-width: 900px;
         flex-direction: row;

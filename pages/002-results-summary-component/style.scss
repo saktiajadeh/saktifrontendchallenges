@@ -186,7 +186,7 @@ $primaryTransition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 @media (min-width: 576px){
     .container{
-        min-height: 100vh;
+        min-height: 100dvh;
         padding: 0 20px;
         .wrap-card{
             border-radius: 20px;
