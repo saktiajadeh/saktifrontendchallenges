@@ -27,17 +27,56 @@
                     <div class="wrap-content">
                         <div class="spacer">
                             <div class="wrap-list-column">
-                                <div class="list-item bg-white" v-for="row in data">
+                                <div class="list-item bg-white">
                                     <div class="spacer">
                                         <div class="wrap-title f-verydarkblue fw-600">
-                                            {{row.title}}
+                                            Supervisor
                                         </div>
                                         <div class="wrap-description f-verydarkblue f-grayishblue mt-20">
-                                            {{ row.description }}
+                                            Monitors activity to identify project roadblocks
                                         </div>
                                     </div>
                                     <div class="wrap-img mt-30">
-                                        <img :src="row.image" alt=""/>
+                                        <img src="./images/icon-supervisor.svg" alt=""/>
+                                    </div>
+                                </div>
+                                <div class="list-item bg-white">
+                                    <div class="spacer">
+                                        <div class="wrap-title f-verydarkblue fw-600">
+                                            Team Builder
+                                        </div>
+                                        <div class="wrap-description f-verydarkblue f-grayishblue mt-20">
+                                            Scans our talent network to create the optimal team for your project
+                                        </div>
+                                    </div>
+                                    <div class="wrap-img mt-30">
+                                        <img src="./images/icon-team-builder.svg" alt=""/>
+                                    </div>
+                                </div>
+                                <div class="list-item bg-white">
+                                    <div class="spacer">
+                                        <div class="wrap-title f-verydarkblue fw-600">
+                                            Karma
+                                        </div>
+                                        <div class="wrap-description f-verydarkblue f-grayishblue mt-20">
+                                            Regularly evaluates our talent to ensure quality
+                                        </div>
+                                    </div>
+                                    <div class="wrap-img mt-30">
+                                        <img src="./images/icon-karma.svg" alt=""/>
+                                    </div>
+                                </div>
+                                <div class="list-item bg-white">
+                                    <div class="spacer">
+                                        <div class="wrap-title f-verydarkblue fw-600">
+                                            Calculator
+                                        </div>
+                                        <div class="wrap-description f-verydarkblue f-grayishblue mt-20">
+                                            Uses data from past projects to provide better delivery estimates
+                                        </div>
+                                    </div>
+                                    <div class="wrap-img mt-30">
+                                        <img src="./images/icon-calculator.svg" alt=""/>
                                     </div>
                                 </div>
                             </div>
