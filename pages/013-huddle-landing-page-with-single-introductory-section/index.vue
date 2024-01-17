@@ -8,7 +8,7 @@
         </figure>
         <section class="contain">
             <header class="header">
-                <a href="https://www.google.com/" target="_blank" class="header-image">
+                <a href="#" target="_blank" class="header-image">
                     <img class="" src="./images/logo.svg" alt="Logo Huddle" />
                 </a>
             </header>
@@ -27,7 +27,7 @@
                             Create connections with your users as you engage in genuine discussion.
                         </p>
                         <nav class="wrapper-action">
-                            <a href="https://www.google.com/" target="_blank" class="btn-main">
+                            <a href="#" target="_blank" class="btn-main">
                                 Register
                             </a>
                         </nav>
@@ -37,13 +37,13 @@
 
             <footer class="footer">
                 <nav class="social-links">
-                    <a href="https://www.google.com/" target="_blank" class="btn-circle-border">
+                    <a href="#" target="_blank" class="btn-circle-border">
                         <i class="ion-social-facebook"></i>
                     </a>
-                    <a href="https://www.google.com/" target="_blank" class="btn-circle-border">
+                    <a href="#" target="_blank" class="btn-circle-border">
                         <i class="ion-social-twitter"></i>
                     </a>
-                    <a href="https://www.google.com/" target="_blank" class="btn-circle-border">
+                    <a href="#" target="_blank" class="btn-circle-border">
                         <i class="ion-social-instagram"></i>
                     </a>
                 </nav>

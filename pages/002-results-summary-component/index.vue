@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <div class="wrap-action">
-                        <a href="https://www.google.com/" target="_blank" class="wrap-button">
+                        <a href="#" target="_blank" class="wrap-button">
                             Continue
                         </a>
                     </div>

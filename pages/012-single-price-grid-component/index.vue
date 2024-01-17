@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div class="wrap-action mt-20">
-                            <a href="https://www.google.com/" target="_blank" class="wrap-button bg-brightyellow f-white fw-700">
+                            <a href="#" target="_blank" class="wrap-button bg-brightyellow f-white fw-700">
                                 <span>Sign Up</span>
                             </a>
                         </div>
@@ -49,25 +49,25 @@
                                 Why Us
                             </div>
                             <div class="wrap-description mt-20">
-                                <a href="https://www.google.com/" target="_blank" class="f-white75 fw-400 d-block t-decor-none">
+                                <a href="#" target="_blank" class="f-white75 fw-400 d-block t-decor-none">
                                     Tutorials by industry experts
                                 </a>
-                                <a href="https://www.google.com/" target="_blank" class="f-white75 fw-400 d-block t-decor-none mt-5">
+                                <a href="#" target="_blank" class="f-white75 fw-400 d-block t-decor-none mt-5">
                                     Peer & expert code reviews
                                 </a>
-                                <a href="https://www.google.com/" target="_blank" class="f-white75 fw-400 d-block t-decor-none mt-5">
+                                <a href="#" target="_blank" class="f-white75 fw-400 d-block t-decor-none mt-5">
                                     Coding exercises
                                 </a>
-                                <a href="https://www.google.com/" target="_blank" class="f-white75 fw-400 d-block t-decor-none mt-5">
+                                <a href="#" target="_blank" class="f-white75 fw-400 d-block t-decor-none mt-5">
                                     Access to our GitHub repos
                                 </a>
-                                <a href="https://www.google.com/" target="_blank" class="f-white75 fw-400 d-block t-decor-none mt-5">
+                                <a href="#" target="_blank" class="f-white75 fw-400 d-block t-decor-none mt-5">
                                     Community forum
                                 </a>
-                                <a href="https://www.google.com/" target="_blank" class="f-white75 fw-400 d-block t-decor-none mt-5">
+                                <a href="#" target="_blank" class="f-white75 fw-400 d-block t-decor-none mt-5">
                                     Flashcard decks
                                 </a>
-                                <a href="https://www.google.com/" target="_blank" class="f-white75 fw-400 d-block t-decor-none mt-5">
+                                <a href="#" target="_blank" class="f-white75 fw-400 d-block t-decor-none mt-5">
                                     New videos every week
                                 </a>
                             </div>

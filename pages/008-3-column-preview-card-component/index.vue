@@ -17,7 +17,7 @@
                             </div>
                         </div>
                         <div class="wrap-action">
-                            <a href="https://www.google.com/" target="_blank" class="wrap-button primary">
+                            <a href="#" target="_blank" class="wrap-button primary">
                                 <span>Learn More</span>
                             </a>
                         </div>
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                         <div class="wrap-action">
-                            <a href="https://www.google.com/" target="_blank" class="wrap-button primary">
+                            <a href="#" target="_blank" class="wrap-button primary">
                                 <span>Learn More</span>
                             </a>
                         </div>
@@ -58,7 +58,7 @@
                             </div>
                         </div>
                         <div class="wrap-action">
-                            <a href="https://www.google.com/" target="_blank" class="wrap-button primary">
+                            <a href="#" target="_blank" class="wrap-button primary">
                                 <span>Learn More</span>
                             </a>
                         </div>

@@ -27,15 +27,15 @@
                                 <span>$59.99/year</span>
                             </div>
                         </div>
-                        <a href="https://www.google.com/" target="_blank" class="show-info">
+                        <a href="#" target="_blank" class="show-info">
                             Change
                         </a>
                     </div>
                     <div class="wrap-action">
-                        <a href="https://www.google.com/" target="_blank" class="wrap-button primary">
+                        <a href="#" target="_blank" class="wrap-button primary">
                             <span>Proceed to Payment</span>
                         </a>
-                        <a href="https://www.google.com/" target="_blank" class="wrap-button cancel">
+                        <a href="#" target="_blank" class="wrap-button cancel">
                             <span>Cancel Order</span>
                         </a>
                     </div>

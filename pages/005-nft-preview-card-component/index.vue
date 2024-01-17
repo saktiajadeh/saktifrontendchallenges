@@ -2,14 +2,14 @@
     <div class="body">
         <div class="container">
             <div class="wrap-card">
-                <a href="https://www.google.com/" target="_blank" class="wrap-img">
+                <a href="#" target="_blank" class="wrap-img">
                     <img src=".\images\image-equilibrium.jpg" alt="Image Product">
                     <div class="active-states">
                         <img src=".\images\icon-view.svg" alt="Icon View">
                     </div>
                 </a>
                 <div class="wrap-content">
-                    <a href="https://www.google.com/" target="_blank" class="wrap-title">
+                    <a href="#" target="_blank" class="wrap-title">
                         Equilibrium #3429
                     </a>
                     <div class="wrap-description">
@@ -26,7 +26,7 @@
                         </span>
                     </div>
                     <div class="separator"></div>
-                    <a href="https://www.google.com/" target="_blank" class="wrap-info-with-thumb">
+                    <a href="#" target="_blank" class="wrap-info-with-thumb">
                         <img src=".\images\image-avatar.png" alt="">
                         <span>Creation of</span>&nbsp;
                         <span class="name">Jules Wyvern</span>

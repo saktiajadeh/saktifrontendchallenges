@@ -72,7 +72,7 @@
 						<div class="spacer">
 							<div class="wrap-testimonial">
 								<div class="testimonial-item bg-verydarkmagenta">
-									<a href="https://www.google.com/" target="_blank" class="wrap-info-with-thumb">
+									<a href="#" target="_blank" class="wrap-info-with-thumb">
 										<img src=".\images\image-colton.jpg" alt="">
 										<div class="text-info">
 											<span class="f-white fw-500">
@@ -90,7 +90,7 @@
 									</div>
 								</div>
 								<div class="testimonial-item bg-verydarkmagenta">
-									<a href="https://www.google.com/" target="_blank" class="wrap-info-with-thumb">
+									<a href="#" target="_blank" class="wrap-info-with-thumb">
 										<img src=".\images\image-irene.jpg" alt="">
 										<div class="text-info">
 											<span class="f-white fw-500">
@@ -107,7 +107,7 @@
 									</div>
 								</div>
 								<div class="testimonial-item bg-verydarkmagenta">
-									<a href="https://www.google.com/" target="_blank" class="wrap-info-with-thumb">
+									<a href="#" target="_blank" class="wrap-info-with-thumb">
 										<img src=".\images\image-anne.jpg" alt="">
 										<div class="text-info">
 											<span class="f-white fw-500">

@@ -8,7 +8,7 @@
                 </div>
                 <div class="wrap-content">
                     <div class="wrap-tag">
-                        <a href="https://www.google.com/" target="_blank" class="tag-item">
+                        <a href="#" target="_blank" class="tag-item">
                             Perfume
                         </a>
                     </div>
@@ -24,7 +24,7 @@
                         <span class="disc-price">$169.99</span>
                     </div>
                     <div class="wrap-action">
-                        <a href="https://www.google.com/" target="_blank" class="wrap-button">
+                        <a href="#" target="_blank" class="wrap-button">
                             <img src=".\images\icon-cart.svg" alt="Icon Cart">
                             <span>Add to Cart</span>
                         </a>
