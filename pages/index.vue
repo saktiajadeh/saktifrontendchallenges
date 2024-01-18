@@ -111,5 +111,10 @@
             url: "/013-huddle-landing-page-with-single-introductory-section",
             imageUrl: '/challenge-assets/013-huddle-landing-page-with-single-introductory-section/design/desktop-preview.jpg',
         },
+        {
+            title: '014 FAQ accordion',
+            url: "/014-faq-accordion",
+            imageUrl: '/challenge-assets/014-faq-accordion/design/desktop-preview.jpg',
+        },
     ]);
 </script>
