@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   css: ['~/assets/scss/main.scss'],
   app: {
     head:{
+      htmlAttrs: {
+        lang: 'en',
+      },
       link: [
         { rel: 'stylesheet', href: './library/ionicons/css/ionicons.min.css' },
       ]
