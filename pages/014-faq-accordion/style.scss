@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$primaryTransition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$secondaryTransition: all 0.3s ease;
+
+$font-family-system: system-ui,
+-apple-system,
+BlinkMacSystemFont,
+'Segoe UI',
+Roboto,
+Oxygen,
+Ubuntu,
+Cantarell,
+'Open Sans',
+'Helvetica Neue',
+sans-serif;
+
+$fontsize-p: 16px;
+$fontsize-h1: 2.06666667em;
+$fontsize-h2: 1.8em;
+$fontsize-h3: 1.53333333em;
+$fontsize-h4: 1.26666667em;
+$fontsize-h5: 1.13333333em;
+$fontsize-h6: 1em;
+
+$lightgray: #fafafa;
+$gray: #ddd;
+$white: hsl(0, 0%, 100%);
+$white75: hsla(0, 0%, 100%, 0.75);
+$lightpink: hsl(275, 100%, 97%);
+$grayishpurple: hsl(292, 16%, 49%);
+$grayishpurple10: hsl(292, 16%, 49%, 10%);
+$darkpurple: hsl(292, 42%, 14%);
+$softmagenta: hsl(300, 69%, 71%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes fadeInScaleFromLeft {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: left;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: left;
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: left;
+    }
+}
+
+@keyframes fadeInScaleFromTop {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: top right;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: top right;
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: top right;
+    }
+}
+
+.animate {
+    animation-duration: 0.7s;
+    -webkit-animation-duration: 0.7s;
+    animation-timing-function: cubic-bezier(.85, 0, .12, 1);
+    -webkit-animation-timing-function: cubic-bezier(.85, 0, .12, 1);
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+
+    &.animate-timing-ease-out {
+        animation-timing-function: ease-out !important;
+        -webkit-animation-timing-function: ease-out !important;
+    }
+
+    &.animate-duration-300ms {
+        animation-duration: 300ms !important;
+        -webkit-animation-duration: 300ms !important;
+    }
+
+    &.fadeInScaleFromLeft {
+        -webkit-animation-name: fadeInScaleFromLeft;
+        animation-name: fadeInScaleFromLeft;
+    }
+
+    &.fadeInScaleFromTop {
+        -webkit-animation-name: fadeInScaleFromTop;
+        animation-name: fadeInScaleFromTop;
+    }
+}
+
+.wrapper {
+    font-family: 'Work Sans', $font-family-system;
+    position: relative;
+    background-color: $lightpink;
+    font-size: $fontsize-p;
+    overflow: hidden;
+
+    .absolute-bg {
+        width: 100%;
+        height: 232px;
+        transition: $secondaryTransition;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: left;
+
+            &.bg-mobile {
+                display: block;
+            }
+
+            &.bg-desktop {
+                display: none;
+            }
+        }
+    }
+
+    .contain {
+        padding: 30px 24px;
+        min-height: calc(100dvh - 232px);
+        max-width: 647px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transition: $secondaryTransition;
+
+        a {
+            display: block;
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: $fontsize-h1;
+        }
+
+        h2 {
+            font-size: $fontsize-h2;
+        }
+
+        h3 {
+            font-size: $fontsize-h3;
+        }
+
+        h4 {
+            font-size: $fontsize-h4;
+        }
+
+        h5 {
+            font-size: $fontsize-h5;
+        }
+
+        h6 {
+            font-size: $fontsize-h6;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .section-content {
+            margin-top: -120px;
+            background-color: $white;
+            border-radius: 10px;
+            padding: 27px 25px;
+            transition: $secondaryTransition;
+
+            .wrap-title {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 24px;
+
+                .wrap-image {
+                    width: 23px;
+                    height: 29px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                .title {
+                    font-size: 2em;
+                    font-weight: 700;
+                }
+            }
+
+            .wrap-list {
+                .accordion-list {
+                    .list-item {
+                        padding: 20px 0;
+                        border-bottom: 1px solid $grayishpurple10;
+
+                        &:nth-last-of-type(1) {
+                            border-bottom: 1px solid transparent;
+                        }
+
+                        &.active {
+                            .title-list-item {
+                                .btn-circle {
+                                    background-color: $darkpurple;
+
+                                    i {
+                                        &.ion-minus-round {
+                                            display: flex;
+                                        }
+
+                                        &.ion-plus-round {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .content-list-item {
+                                display: block;
+                            }
+                        }
+
+                        .title-list-item {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            gap: 20px;
+
+                            .title {
+                                font-weight: 600;
+                                color: $darkpurple;
+                                transition: $primaryTransition;
+                                cursor: pointer;
+
+                                &:hover {
+                                    color: $softmagenta;
+                                }
+                            }
+
+                            .btn-circle {
+                                cursor: pointer;
+                                border: 1px solid;
+                                border-color: transparent;
+                                border-radius: 50%;
+                                width: 25px;
+                                height: 25px;
+                                padding: 0;
+                                background-color: $softmagenta;
+                                color: $white;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transition: $primaryTransition;
+
+                                i {
+                                    width: 25px;
+                                    height: 25px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    &.ion-minus-round {
+                                        display: none;
+                                        font-size: 15px;
+                                    }
+
+                                    &.ion-plus-round {
+                                        font-size: 15px;
+                                    }
+                                }
+
+                                &:hover {
+                                    background-color: $darkpurple;
+
+                                    i {
+                                        color: $lightpink;
+                                    }
+                                }
+                            }
+                        }
+
+                        .content-list-item {
+                            padding: 26px 0 0 0;
+                            display: none;
+
+                            .description {
+                                font-weight: 400;
+                                font-size: 0.875em;
+                                line-height: 21px;
+                                color: $grayishpurple;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        .absolute-bg {
+            height: 320px;
+
+            img {
+                &.bg-mobile {
+                    display: none;
+                }
+
+                &.bg-desktop {
+                    display: block;
+                }
+            }
+        }
+
+        .contain {
+            min-height: calc(100dvh - 320px);
+
+            .section-content {
+                margin-top: -182px;
+                padding: 42px 40px;
+
+                .wrap-title {
+                    .wrap-image {
+                        width: 41px;
+                        height: 50px;
+                    }
+
+                    .title {
+                        font-size: 3.37500em;
+                    }
+                }
+
+                .wrap-list {
+                    .accordion-list {
+                        margin-top: 13px;
+
+                        .list-item {
+                            padding: 24px 0;
+                            padding-bottom: 17px;
+
+                            .title-list-item {
+                                .title {
+                                    font-size: 1.12500em;
+                                }
+                            }
+
+                            .content-list-item {
+                                .description {
+                                    font-size: 1em;
+                                    line-height: 23px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
