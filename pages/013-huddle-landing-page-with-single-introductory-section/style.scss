@@ -133,7 +133,7 @@ $softmagenta: hsl(300, 69%, 71%);
     }
 
     .contain {
-        padding: 30px 20px;
+        padding: 20px 20px;
         min-height: 100dvh;
         max-width: 600px;
         margin: auto;
@@ -236,7 +236,7 @@ $softmagenta: hsl(300, 69%, 71%);
             justify-content: space-between;
             flex-wrap: wrap;
             position: relative;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
 
             .header-image {
                 img {
@@ -269,7 +269,7 @@ $softmagenta: hsl(300, 69%, 71%);
 
             .article-content {
                 h2 {
-                    margin-top: 30px;
+                    margin-top: 20px;
                     font-weight: 600;
                 }
 
@@ -287,7 +287,7 @@ $softmagenta: hsl(300, 69%, 71%);
         }
 
         .footer {
-            margin-top: 30px;
+            margin-top: 20px;
             position: relative;
 
             .social-links {
