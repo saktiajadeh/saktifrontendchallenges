@@ -126,5 +126,10 @@
             url: "/016-social-links-profile",
             imageUrl: '/challenge-assets/016-social-links-profile/design/desktop-preview.jpg',
         },
+        {
+            title: '017 Interactive rating component',
+            url: "/017-interactive-rating-component",
+            imageUrl: '/challenge-assets/017-interactive-rating-component/design/desktop-preview.jpg',
+        },
     ]);
 </script>
