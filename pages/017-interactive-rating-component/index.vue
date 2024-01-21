@@ -2,50 +2,43 @@
     <main class="wrapper">
         <section class="contain">
             <section class="section-content">
-                <!-- <figure class="wrap-img">
-                  <img src="./assets/images/avatar-jessica.jpeg" alt="Image omelette">
-              </figure>
-              <article class="wrap-text">
-                  <h1 class="main-title">
-                      Jessica Randall
-                  </h1>
-                  <h2 class="main-highlight">
-                      London, United Kingdom
-                  </h2>
-                  <p class="main-description">
-                      "Front-end developer and avid reader."
-                  </p>
-                  <nav class="wrap-button">
-                      <a :href="row.url" target="_blank" class="btn-main" v-for="(row, index) in buttonList"
-                          :key="index">
-                          {{ row.title }}
-                      </a>
-                  </nav>
-              </article> -->
-                <!-- Rating state start -->
-
-                How did we do?
-
-                Please let us know how we did with your support request. All feedback is appreciated
-                to help us improve our offering!
-
-                1 2 3 4 5
-
-                Submit
-
-                <!-- Rating state end -->
-
-                <!-- Thank you state start -->
-
-                You selected
-                <!-- Add rating here --> out of 5
-
-                Thank you!
-
-                We appreciate you taking the time to give a rating. If you ever need more support,
-                don’t hesitate to get in touch!
-
-                <!-- Thank you state end -->
+                <article class="rating-state-start" v-if="step === 1">
+                    <figure class="wrap-img">
+                        <img src="./images/icon-star.svg" alt="Icon star">
+                    </figure>
+                    <h1 class="main-title">
+                        How did we do?
+                    </h1>
+                    <p class="main-description">
+                        Please let us know how we did with your support request. All feedback is appreciated
+                        to help us improve our offering!
+                    </p>
+                    <nav class="rating-option">
+                        <button class="btn-circle" v-for="(row, index) in buttonRatingList" :key="index"
+                            :class="selectedButtonRating === row.value ? 'active' : ''"
+                            @click="selectOption(row.value)">
+                            {{ row.title }}
+                        </button>
+                    </nav>
+                    <button class="btn-main" @click="submitFirstStep()">
+                        Submit
+                    </button>
+                </article>
+                <article class="rating-state-end" v-if="step === 2">
+                    <figure class="wrap-img animate animate-duration-300ms fadeInScaleFromTop">
+                        <img src="./images/illustration-thank-you.svg" alt="Illustration thank you">
+                    </figure>
+                    <p class="selected-description animate animate-duration-300ms animate-delay-150ms fadeInScaleFromCenter">
+                        You selected {{ selectedButtonRating }} out of 5
+                    </p>
+                    <h1 class="main-title animate animate-duration-300ms animate-delay-300ms fadeInScaleFromCenter">
+                        Thank you!
+                    </h1>
+                    <p class="main-description animate animate-duration-300ms animate-delay-450ms fadeInScaleFromCenter">
+                        We appreciate you taking the time to give a rating. If you ever need more support,
+                        don’t hesitate to get in touch!
+                    </p>
+                </article>
             </section>
         </section>
     </main>
@@ -56,29 +49,59 @@
 </style>
 
 <script setup>
+    import {
+        ref
+    } from 'vue';
+    import Swal from 'sweetalert2';
+
     useHead({
         title: '017 Interactive rating component',
     });
 
-    const buttonList = ref([{
-            title: 'GitHub',
-            url: '#',
+    const step = ref(1);
+    const selectedButtonRating = ref(-1);
+    const buttonRatingList = ref([{
+            title: '1',
+            value: 1,
         },
         {
-            title: 'Frontend Mentor',
-            url: '#',
+            title: '2',
+            value: 2,
         },
         {
-            title: 'LinkedIn',
-            url: '#',
+            title: '3',
+            value: 3,
         },
         {
-            title: 'Twitter',
-            url: '#',
+            title: '4',
+            value: 4,
         },
         {
-            title: 'Instagram',
-            url: '#',
+            title: '5',
+            value: 5,
         },
     ]);
+
+    const selectOption = (option) => {
+        selectedButtonRating.value = option;
+    };
+
+    const submitFirstStep = () => {
+        let isIncludes = false;
+        buttonRatingList.value.forEach((val, i) => {
+            if (val.value === selectedButtonRating.value) {
+                isIncludes = true;
+            }
+
+        });
+
+        if (isIncludes) {
+            step.value += 1;
+        } else {
+            Swal.fire({
+                icon: 'error',
+                text: 'Please select an option before proceeding.',
+            });
+        }
+    };
 </script>
