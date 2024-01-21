@@ -3,6 +3,9 @@
 </template>
 
 <script setup>
+    useSeoMeta({
+        ogImage: '/og-image.png'
+    });
 </script>
 
 <style lang="scss" scoped>
