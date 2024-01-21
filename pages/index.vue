@@ -116,5 +116,10 @@
             url: "/014-faq-accordion",
             imageUrl: '/challenge-assets/014-faq-accordion/design/desktop-preview.jpg',
         },
+        {
+            title: '015 Recipe page',
+            url: "/015-recipe-page",
+            imageUrl: '/challenge-assets/015-recipe-page/design/desktop-preview.jpg',
+        },
     ]);
 </script>
