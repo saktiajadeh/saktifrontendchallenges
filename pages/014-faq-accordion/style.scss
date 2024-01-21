@@ -138,13 +138,12 @@ $softmagenta: hsl(300, 69%, 71%);
 
     .contain {
         padding: 30px 24px;
-        min-height: calc(100dvh - 232px);
+        min-height: calc(100vh - 232px);
         max-width: 647px;
         margin: auto;
         display: flex;
         flex-direction: column;
         position: relative;
-        transition: $secondaryTransition;
 
         a {
             display: block;
@@ -335,7 +334,7 @@ $softmagenta: hsl(300, 69%, 71%);
         }
 
         .contain {
-            min-height: calc(100dvh - 320px);
+            min-height: calc(100vh - 320px);
 
             .section-content {
                 margin-top: -182px;
