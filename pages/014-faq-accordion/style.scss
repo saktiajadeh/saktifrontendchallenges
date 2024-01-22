@@ -2,6 +2,7 @@
 
 $primaryTransition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 $secondaryTransition: all 0.3s ease;
+$thirdTransition: all 0.5s cubic-bezier(.85, 0, .12, 1);
 
 $font-family-system: system-ui,
 -apple-system,
@@ -236,7 +237,8 @@ $softmagenta: hsl(300, 69%, 71%);
                             }
 
                             .content-list-item {
-                                display: block;
+                                max-height: 10000px;
+                                transform: scale(1);
                             }
                         }
 
@@ -300,10 +302,14 @@ $softmagenta: hsl(300, 69%, 71%);
                         }
 
                         .content-list-item {
-                            padding: 26px 0 0 0;
-                            display: none;
+                            max-height: 0;
+                            overflow: hidden;
+                            transform: scale(0);
+                            transform-origin: top right;
+                            transition: $thirdTransition;
 
                             .description {
+                                padding: 26px 0 0 0;
                                 font-weight: 400;
                                 font-size: 0.875em;
                                 line-height: 21px;
