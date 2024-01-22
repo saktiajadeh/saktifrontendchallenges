@@ -6,7 +6,7 @@
                     <li v-for="(row, index) in cardList" :key="index">
                         <NuxtLink :to="row.url" class="wrap-item">
                             <figure class="wrap-img">
-                                <img :src="row.imageUrl" :alt="'Preview Design '+index+1">
+                                <img :src="row.imageUrl" :alt="'Preview Design '+(Number(index)+Number(1))">
                                 <article class="overlay">
                                 </article>
                             </figure>
@@ -120,6 +120,11 @@
             title: '015 Recipe page',
             url: "/015-recipe-page",
             imageUrl: '/challenge-assets/015-recipe-page/design/desktop-preview.jpg',
+        },
+        {
+            title: '016 Social links profile',
+            url: "/016-social-links-profile",
+            imageUrl: '/challenge-assets/016-social-links-profile/design/desktop-preview.jpg',
         },
     ]);
 </script>
