@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$primaryTransition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$secondaryTransition: all 0.3s ease;
+
+$font-family-system: system-ui,
+-apple-system,
+BlinkMacSystemFont,
+'Segoe UI',
+Roboto,
+Oxygen,
+Ubuntu,
+Cantarell,
+'Open Sans',
+'Helvetica Neue',
+sans-serif;
+
+$fontsize-p: 15px;
+$fontsize-h1: 2.06666667em;
+$fontsize-h2: 1.8em;
+$fontsize-h3: 1.53333333em;
+$fontsize-h4: 1.26666667em;
+$fontsize-h5: 1.13333333em;
+$fontsize-h6: 1em;
+
+$lightgray: #fafafa;
+$gray: #ddd;
+$white: hsl(0, 0%, 100%);
+$white75: hsla(0, 0%, 100%, 0.75);
+
+$Orange: hsl(25, 97%, 53%);
+$LightGrey: hsl(217, 12%, 63%);
+$LightGrey10: hsl(217, 12%, 63%, 10%);
+$LightGrey85: hsl(217, 12%, 63%, 85%);
+$MediumGrey: hsl(216, 12%, 54%);
+$DarkBlue: hsl(213, 19%, 18%);
+$VeryDarkBlue: hsl(216, 12%, 8%);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes fadeInScaleFromLeft {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: left;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: left;
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: left;
+    }
+}
+
+@keyframes fadeInScaleFromTop {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: top;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: top;
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: top;
+    }
+}
+
+@keyframes fadeInScaleFromCenter {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: center;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: center;
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: center;
+    }
+}
+
+.animate {
+    animation-duration: 0.7s;
+    -webkit-animation-duration: 0.7s;
+    animation-timing-function: cubic-bezier(.85, 0, .12, 1);
+    -webkit-animation-timing-function: cubic-bezier(.85, 0, .12, 1);
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+
+    &.animate-timing-ease-out {
+        animation-timing-function: ease-out !important;
+        -webkit-animation-timing-function: ease-out !important;
+    }
+
+    &.animate-duration-300ms {
+        animation-duration: 300ms !important;
+        -webkit-animation-duration: 300ms !important;
+    }
+    &.animate-delay-150ms {
+        animation-delay: 150ms !important;
+        -webkit-animation-delay: 150ms !important;
+    }
+    &.animate-delay-300ms {
+        animation-delay: 300ms !important;
+        -webkit-animation-delay: 300ms !important;
+    }
+    &.animate-delay-450ms {
+        animation-delay: 450ms !important;
+        -webkit-animation-delay: 450ms !important;
+    }
+    &.animate-delay-600ms {
+        animation-delay: 600ms !important;
+        -webkit-animation-delay: 600ms !important;
+    }
+    &.animate-delay-900ms {
+        animation-delay: 900ms !important;
+        -webkit-animation-delay: 900ms !important;
+    }
+    &.fadeInScaleFromLeft {
+        -webkit-animation-name: fadeInScaleFromLeft;
+        animation-name: fadeInScaleFromLeft;
+    }
+
+    &.fadeInScaleFromTop {
+        -webkit-animation-name: fadeInScaleFromTop;
+        animation-name: fadeInScaleFromTop;
+    }
+    &.fadeInScaleFromCenter{
+        -webkit-animation-name: fadeInScaleFromCenter;
+        animation-name: fadeInScaleFromCenter;
+    }
+}
+
+.wrapper {
+    font-family: 'Overpass', $font-family-system;
+    position: relative;
+    background-color: $VeryDarkBlue;
+    font-size: $fontsize-p;
+    overflow: hidden;
+
+    .contain {
+        min-height: 100dvh;
+        max-width: 375px;
+        padding: 24px 24px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        a {
+            display: block;
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: $fontsize-h1;
+        }
+
+        h2 {
+            font-size: $fontsize-h2;
+        }
+
+        h3 {
+            font-size: $fontsize-h3;
+        }
+
+        h4 {
+            font-size: $fontsize-h4;
+        }
+
+        h5 {
+            font-size: $fontsize-h5;
+        }
+
+        h6 {
+            font-size: $fontsize-h6;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .section-content {
+            margin: auto;
+            width: 100%;
+            padding: 25px;
+            border-radius: 10px;
+            transition: $secondaryTransition;
+            background-color: $DarkBlue;
+            color: $LightGrey;
+            min-height: 361px;
+
+            .main-title{
+                font-size: 1.6em;
+                font-weight: 600;
+                color: $white;
+                transition: $secondaryTransition;
+            }
+            .main-description{
+                font-size: 0.933333333em;
+                font-weight: 400;
+                line-height: 22px;
+                color: $LightGrey;
+                transition: $secondaryTransition;
+            }
+
+            .rating-state-start{
+                .wrap-img{
+                    width: 39px;
+                    height: 39px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $LightGrey10;
+                    transition: $primaryTransition;
+                    img{
+                        width: 16px;
+                        height: 16px;
+                        object-fit: contain;
+                    }
+                }
+                .main-title{
+                    margin-top: 17px;
+                }
+                .main-description{
+                    margin-top: 13px;
+                }
+                .rating-option{
+                    margin-top: 27px;
+                    display: flex;
+                    justify-content: space-between;
+                    .btn-circle{
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        outline: none;
+                        font-weight: 600;
+                        border-radius: 50%;
+                        border: 1px solid transparent;
+                        background-color: $LightGrey10;
+                        color: $LightGrey;
+                        transition: $secondaryTransition;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: $LightGrey85;
+                            color: $white;
+                        }
+                        &.active{
+                            background-color: $Orange;
+                            color: $white;
+                        }
+                    }
+                }
+                .btn-main{
+                    margin-top: 29px;
+                    width: 100%;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    outline: none;
+                    font-weight: 700;
+                    border-radius: 20px;
+                    border: 1px solid transparent;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    font-size: 0.933333333em;
+                    letter-spacing: 2px;
+                    transition: $secondaryTransition;
+                    background-color: $Orange;
+                    color: $white;
+                    &:hover{
+                        background-color: $white;
+                        color: $Orange;
+                    }
+                }
+            }
+            .rating-state-end{
+                .wrap-img{
+                    margin-top: 10px;
+                    width: 100%;
+                    height: 96px;
+                    text-align: center;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                .selected-description{
+                    margin: auto;
+                    margin-top: 24px;
+                    padding: 10px;
+                    min-height: 32px;
+                    width: 100%;
+                    max-width: 166px;
+                    font-size: 0.933333333em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 20px;
+                    background-color: $LightGrey10;
+                    color: $Orange;
+                }
+                .main-title{
+                    margin-top: 26px;
+                    text-align: center;
+                }
+                .main-description{
+                    margin-top: 13px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .wrapper {
+        .contain {
+            max-width: 460px;
+            .section-content {
+                padding: 32px;
+                border-radius: 30px;
+                .main-title{
+                    font-size: 1.86666667em;
+                }
+                .main-description{
+                    font-size: 1em;
+                }
+                .rating-state-start{
+                    .wrap-img{
+                        margin-top: 7px;
+                        width: 50px;
+                        height: 50px;
+                    }
+                    .main-title{
+                        margin-top: 28px;
+                    }
+                    .main-description{
+                        margin-top: 15px;
+                        font-size: 1em;
+                    }
+
+                    .rating-option{
+                        .btn-circle{
+                            width: 50px;
+                            height: 50px;
+                            font-size: 1.06666667em;
+                        }
+                    }
+                    .btn-main{
+                        margin-top: 37px;
+                    }
+                }
+                .rating-state-end{
+                    padding-top: 23px;
+                    min-height: 348px;
+                    .wrap-img{
+                        margin-top: 0;
+                        height: 103px;
+                        img{
+                        }
+                    }
+                    .selected-description{
+                        max-width: 180px;
+                        font-weight: 700;
+                    }
+                    .main-title{
+                        margin-top: 37px;
+                    }
+                    .main-description{
+
+                    }
+                }
+            }
+        }
+    }
+}
