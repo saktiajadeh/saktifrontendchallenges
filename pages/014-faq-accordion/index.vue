@@ -19,17 +19,18 @@
                 <article class="wrap-list">
                     <ul class="accordion-list">
                         <li class="list-item" v-for="(row, index) in accordionList" :key="index"
-                            :class="{'active': row.isActive}" @keydown.enter="toggleAccordion(index)">
+                            :class="{'active': row.isActive}" @keydown.enter="toggleAccordion(index, $event)"
+                            @click="toggleAccordion(index, $event)" tabindex="0">
                             <article class="title-list-item">
-                                <h6 class="title" @click="toggleAccordion(index)" tabindex="0">
+                                <h6 class="title">
                                     {{ row.title }}
                                 </h6>
-                                <button class="btn-circle" @click="toggleAccordion(index)">
+                                <button class="btn-circle">
                                     <i class="ion-minus-round"></i>
                                     <i class="ion-plus-round"></i>
                                 </button>
                             </article>
-                            <article class="content-list-item animate fadeInScaleFromTop">
+                            <article class="content-list-item">
                                 <p class="description">
                                     {{ row.description }}
                                 </p>
@@ -51,8 +52,15 @@
         title: '014 FAQ accordion',
     });
 
-    const toggleAccordion = (index) => {
-        accordionList.value[index].isActive = !accordionList.value[index].isActive;
+    const toggleAccordion = (index, event) => {
+        const switchTo = !accordionList.value[index].isActive;
+        accordionList.value[index].isActive = switchTo;
+        let contentElementByCurrentTarget = event.currentTarget.querySelector('.content-list-item');
+        if (switchTo) {
+            contentElementByCurrentTarget.style.maxHeight = contentElementByCurrentTarget.scrollHeight + "px";
+        } else {
+            contentElementByCurrentTarget.style.maxHeight = 0;
+        }
     };
 
     const accordionList = ref([{
