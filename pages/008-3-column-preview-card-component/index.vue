@@ -76,5 +76,17 @@
 <script setup>
     useHead({
         title: '008 3-column preview card component',
+        link: [
+            {
+                rel: 'stylesheet',
+                href: 'https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap',
+                crossorigin: ''
+            }, 
+            {
+                rel: 'stylesheet',
+                href: 'https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900&display=swap',
+                crossorigin: ''
+            }, 
+        ]
     })
 </script>

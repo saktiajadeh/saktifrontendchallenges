@@ -57,22 +57,27 @@
                         </h2>
                         <ol class="step-list">
                             <li>
-                                <span>Beat the eggs:</span> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed.
+                                <span>Beat the eggs:</span> In a bowl, beat the eggs with a pinch of salt and pepper
+                                until they are well mixed.
                                 You can add a tablespoon of water or milk for a fluffier texture.
                             </li>
                             <li>
-                                <span>Heat the pan:</span> Place a non-stick frying pan over medium heat and add butter or oil.
+                                <span>Heat the pan:</span> Place a non-stick frying pan over medium heat and add butter
+                                or oil.
                             </li>
                             <li>
-                                <span>Cook the omelette:</span> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure
+                                <span>Cook the omelette:</span> Once the butter is melted and bubbling, pour in the
+                                eggs. Tilt the pan to ensure
                                 the eggs evenly coat the surface.
                             </li>
                             <li>
-                                <span>Add fillings (optional):</span> When the eggs begin to set at the edges but are still slightly runny in the
+                                <span>Add fillings (optional):</span> When the eggs begin to set at the edges but are
+                                still slightly runny in the
                                 middle, sprinkle your chosen fillings over one half of the omelette.
                             </li>
                             <li>
-                                <span>Fold and serve:</span> As the omelette continues to cook, carefully lift one edge and fold it over the
+                                <span>Fold and serve:</span> As the omelette continues to cook, carefully lift one edge
+                                and fold it over the
                                 fillings. Let it cook for another minute, then slide it onto a plate.
                             </li>
                             <li>
@@ -111,45 +116,6 @@
                 </article>
             </section>
         </section>
-        <!-- <figure class="absolute-bg">
-            <img class="bg-mobile" src="./assets/images/background-pattern-mobile.svg" alt="Background Pattern Mobile">
-            <img class="bg-desktop" src="./assets/images/background-pattern-desktop.svg"
-                alt="Background Pattern Desktop">
-        </figure>
-        <section class="contain">
-            <section class="section-content">
-                <article class="wrap-title">
-                    <figure class="wrap-image">
-                        <img src="./assets/images/icon-star.svg" alt="Icon Star">
-                    </figure>
-                    <h2 class="title">
-                        FAQs
-                    </h2>
-                </article>
-
-                <article class="wrap-list">
-                    <ul class="accordion-list">
-                        <li class="list-item" v-for="(row, index) in accordionList" :key="index"
-                            :class="{'active': row.isActive}" @keydown.enter="toggleAccordion(index)">
-                            <article class="title-list-item">
-                                <h6 class="title" @click="toggleAccordion(index)" tabindex="0">
-                                    {{ row.title }}
-                                </h6>
-                                <button class="btn-circle" @click="toggleAccordion(index)">
-                                    <i class="ion-minus-round"></i>
-                                    <i class="ion-plus-round"></i>
-                                </button>
-                            </article>
-                            <article class="content-list-item animate fadeInScaleFromTop">
-                                <p class="description">
-                                    {{ row.description }}
-                                </p>
-                            </article>
-                        </li>
-                    </ul>
-                </article>
-            </section>
-        </section> -->
     </main>
 </template>
 
@@ -160,6 +126,17 @@
 <script setup>
     useHead({
         title: '015 Recipe page',
+        link: [{
+                rel: 'stylesheet',
+                href: 'https://fonts.googleapis.com/css2?family=Young+Serif&display=swap',
+                crossorigin: ''
+            },
+            {
+                rel: 'stylesheet',
+                href: 'https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Young+Serif&display=swap',
+                crossorigin: ''
+            },
+        ]
     });
 
     const accordionList = ref([{
