@@ -1,8 +1,20 @@
+
 <template>
     <main class="wrapper">
         <section class="contain">
             <section class="section-content">
-                <article class="rating-state-start" v-if="step === 1">
+				Shift the overall look and feel by adding these wonderful
+				touches to furniture in your home
+
+				Ever been in a room and felt like something was missing? Perhaps
+				it felt slightly bare and uninviting. I’ve got some simple tips
+				to help you make any room feel complete.
+
+				Michelle Appleton
+				28 Jun 2020
+
+				Share
+                <!-- <article class="rating-state-start" v-if="step === 1">
                     <figure class="wrap-img">
                         <img src="./images/icon-star.svg" alt="Icon star">
                     </figure>
@@ -38,7 +50,7 @@
                         We appreciate you taking the time to give a rating. If you ever need more support,
                         don’t hesitate to get in touch!
                     </p>
-                </article>
+                </article> -->
             </section>
         </section>
     </main>
@@ -49,13 +61,8 @@
 </style>
 
 <script setup>
-    import {
-        ref
-    } from 'vue';
-    import Swal from 'sweetalert2';
-
     useHead({
-        title: '017 Interactive rating component',
+        title: '018 Article preview component',
         link: [{
                 rel: 'stylesheet',
                 href: 'https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap',
@@ -63,51 +70,4 @@
             },
         ]
     });
-
-    const step = ref(1);
-    const selectedButtonRating = ref(-1);
-    const buttonRatingList = ref([{
-            title: '1',
-            value: 1,
-        },
-        {
-            title: '2',
-            value: 2,
-        },
-        {
-            title: '3',
-            value: 3,
-        },
-        {
-            title: '4',
-            value: 4,
-        },
-        {
-            title: '5',
-            value: 5,
-        },
-    ]);
-
-    const selectOption = (option) => {
-        selectedButtonRating.value = option;
-    };
-
-    const submitFirstStep = () => {
-        let isIncludes = false;
-        buttonRatingList.value.forEach((val, i) => {
-            if (val.value === selectedButtonRating.value) {
-                isIncludes = true;
-            }
-
-        });
-
-        if (isIncludes) {
-            step.value += 1;
-        } else {
-            Swal.fire({
-                icon: 'error',
-                text: 'Please select an option before proceeding.',
-            });
-        }
-    };
 </script>

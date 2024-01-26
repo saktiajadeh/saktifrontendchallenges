@@ -44,5 +44,12 @@
 <script setup>
     useHead({
         title: '005 NFT preview card component',
+        link: [
+            {
+                rel: 'stylesheet',
+                href: 'https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap',
+                crossorigin: ''
+            },
+        ]
     })
 </script>

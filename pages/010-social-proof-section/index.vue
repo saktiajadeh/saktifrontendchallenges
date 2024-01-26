@@ -139,5 +139,12 @@
 <script setup>
 	useHead({
 		title: '010 Social proof section',
+        link: [
+            {
+                rel: 'stylesheet',
+                href: 'https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap',
+                crossorigin: ''
+            },
+        ]
 	})
 </script>

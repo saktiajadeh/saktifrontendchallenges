@@ -131,5 +131,10 @@
             url: "/017-interactive-rating-component",
             imageUrl: '/challenge-assets/017-interactive-rating-component/design/desktop-preview.jpg',
         },
+        {
+            title: '018 Article preview component',
+            url: "/018-article-preview-component",
+            imageUrl: '/challenge-assets/018-article-preview-component/design/desktop-preview.jpg',
+        },
     ]);
 </script>
