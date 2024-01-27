@@ -136,5 +136,10 @@
             url: "/018-article-preview-component",
             imageUrl: '/challenge-assets/018-article-preview-component/design/desktop-preview.jpg',
         },
+        {
+            title: '019 Base Apparel coming soon page',
+            url: "/019-base-apparel-coming-soon",
+            imageUrl: '/challenge-assets/019-base-apparel-coming-soon/design/desktop-preview.jpg',
+        },
     ]);
 </script>

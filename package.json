@@ -15,7 +15,9 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@vee-validate/yup": "^4.12.4",
     "sass": "^1.69.6",
-    "sweetalert2": "^11.10.3"
+    "sweetalert2": "^11.10.3",
+    "vee-validate": "^4.12.4"
   }
 }
