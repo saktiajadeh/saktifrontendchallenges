@@ -1,58 +1,63 @@
-
 <template>
-    <main class="wrapper">
-        <section class="contain">
-            <section class="section-content">
-				Shift the overall look and feel by adding these wonderful
-				touches to furniture in your home
+    <main class="main__wrapper">
+        <div class="container">
+            <section class="main__content">
+                <div class="main__content__wrapimage">
+                    <img src="./images/drawers.jpg" alt="Drawers">
+                </div>
+                <div class="main__content__wrap">
+                    <div class="main__content__text">
+                        <h2 class="main__content__title">
+                            Shift the overall look and feel by adding these wonderful
+                            touches to furniture in your home
+                        </h2>
 
-				Ever been in a room and felt like something was missing? Perhaps
-				it felt slightly bare and uninviting. I’ve got some simple tips
-				to help you make any room feel complete.
-
-				Michelle Appleton
-				28 Jun 2020
-
-				Share
-                <!-- <article class="rating-state-start" v-if="step === 1">
-                    <figure class="wrap-img">
-                        <img src="./images/icon-star.svg" alt="Icon star">
-                    </figure>
-                    <h1 class="main-title">
-                        How did we do?
-                    </h1>
-                    <p class="main-description">
-                        Please let us know how we did with your support request. All feedback is appreciated
-                        to help us improve our offering!
-                    </p>
-                    <nav class="rating-option">
-                        <button class="btn-circle" v-for="(row, index) in buttonRatingList" :key="index"
-                            :class="selectedButtonRating === row.value ? 'active' : ''"
-                            @click="selectOption(row.value)">
-                            {{ row.title }}
+                        <p class="main__content__description">
+                            Ever been in a room and felt like something was missing? Perhaps
+                            it felt slightly bare and uninviting. I’ve got some simple tips
+                            to help you make any room feel complete.
+                        </p>
+                    </div>
+                    <div class="main__content__social" :class="{'active' : isActive}">
+                        <button id="toggleSocial" type="button" @click="toggleSocialShare($event)">
+                            <i class="ion-android-share"></i>
                         </button>
-                    </nav>
-                    <button class="btn-main" @click="submitFirstStep()">
-                        Submit
-                    </button>
-                </article>
-                <article class="rating-state-end" v-if="step === 2">
-                    <figure class="wrap-img animate animate-duration-300ms fadeInScaleFromTop">
-                        <img src="./images/illustration-thank-you.svg" alt="Illustration thank you">
-                    </figure>
-                    <p class="selected-description animate animate-duration-300ms animate-delay-150ms fadeInScaleFromCenter">
-                        You selected {{ selectedButtonRating }} out of 5
-                    </p>
-                    <h1 class="main-title animate animate-duration-300ms animate-delay-300ms fadeInScaleFromCenter">
-                        Thank you!
-                    </h1>
-                    <p class="main-description animate animate-duration-300ms animate-delay-450ms fadeInScaleFromCenter">
-                        We appreciate you taking the time to give a rating. If you ever need more support,
-                        don’t hesitate to get in touch!
-                    </p>
-                </article> -->
+                        <div class="main__content__social__left">
+                            <div class="main__content__social__avatar">
+                                <img src="./images/avatar-michelle.jpg" alt="Avatar Michelle"
+                                    class="animate animate-duration-300ms fadeInScaleFromLeft">
+                                <div class="main__content__social__left__text">
+                                    <p class="animate animate-duration-300ms animate-delay-150ms fadeInScaleFromTop">
+                                        Michelle Appleton
+                                    </p>
+                                    <p class="animate animate-duration-300ms animate-delay-300ms fadeInScaleFromTop">
+                                        28 Jun 2020
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="main__content__social__share animate animate-duration-300ms fadeInScaleFromBottom"
+                                ref="floatingBox">
+                                <p class="animate animate-duration-300ms animate-delay-150ms fadeInScaleFromLeft">
+                                    SHARE
+                                </p>
+                                <a href="#" target="_blank"
+                                    class="animate animate-duration-300ms animate-delay-300ms fadeInScaleFromTop">
+                                    <i class="ion-social-facebook"></i>
+                                </a>
+                                <a href="#" target="_blank"
+                                    class="animate animate-duration-300ms animate-delay-450ms fadeInScaleFromTop">
+                                    <i class="ion-social-twitter"></i>
+                                </a>
+                                <a href="#" target="_blank"
+                                    class="animate animate-duration-300ms animate-delay-600ms fadeInScaleFromTop">
+                                    <i class="ion-social-pinterest"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
-        </section>
+        </div>
     </main>
 </template>
 
@@ -61,13 +66,23 @@
 </style>
 
 <script setup>
+    import {
+        ref
+    } from 'vue';
     useHead({
         title: '018 Article preview component',
         link: [{
-                rel: 'stylesheet',
-                href: 'https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap',
-                crossorigin: ''
-            },
-        ]
+            rel: 'stylesheet',
+            href: 'https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap',
+            crossorigin: ''
+        }, ]
     });
+
+    const isActive = ref(false);
+    const floatingBox = ref(null);
+
+    const toggleSocialShare = (event) => {
+        const switchTo = !isActive.value;
+        isActive.value = switchTo;
+    };
 </script>
