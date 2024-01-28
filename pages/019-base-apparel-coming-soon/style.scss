@@ -361,6 +361,7 @@ $gradientSecondary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 @media (min-width: 992px) {
     .container {
         max-width: 498px;
+        margin: 0 auto;
     }
 
     .wrapper {
@@ -414,7 +415,7 @@ $gradientSecondary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     }
 
     .main__content__title {
-        margin-top: 0;
+        margin-top: 105px;
         font-size: 67px;
         text-align: left;
         letter-spacing: 15px;
