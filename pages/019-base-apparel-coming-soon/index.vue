@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <header class="header__wrapper">
+        <header class="header__wrapper" :class="{ 'bg-gradientPrimary': shouldAddClass }">
             <div class="container">
                 <a href="#" target="_blank">
                     <img src="./images/logo.svg" alt="logo">
@@ -33,8 +33,9 @@
                     <Form @submit="onSubmit" :validation-schema="schema" class="main__content__form">
                         <div class="main__content__form_group">
                             <Field name="email" type="email" v-slot="{ field, errorMessage }" id="email">
-                                <input v-bind="field" placeholder="Email Address" :class="{'error':errorMessage}"/>
-                                <span v-if="errorMessage" class="icon-error animate animate-duration-300ms fadeInScaleFromTop">
+                                <input v-bind="field" placeholder="Email Address" :class="{'error':errorMessage}" />
+                                <span v-if="errorMessage"
+                                    class="icon-error animate animate-duration-300ms fadeInScaleFromTop">
                                     <i class="ion-android-alert"></i>
                                 </span>
                                 <!-- <span v-if="errorMessage" class="error-block">{{ errorMessage }}</span> -->
@@ -43,7 +44,8 @@
                                 <i class="ion-chevron-right"></i>
                             </button>
                         </div>
-                        <ErrorMessage name="email" class="error-block animate animate-duration-300ms fadeInScaleFromLeft"/>
+                        <ErrorMessage name="email"
+                            class="error-block animate animate-duration-300ms fadeInScaleFromLeft" />
                     </Form>
                 </div>
             </section>
@@ -69,8 +71,17 @@
     });
 
     import Swal from 'sweetalert2';
-    import { Form, Field, ErrorMessage } from 'vee-validate';
+    import {
+        Form,
+        Field,
+        ErrorMessage
+    } from 'vee-validate';
     import * as yup from 'yup';
+    import {
+        ref,
+        onMounted,
+        onUnmounted
+    } from 'vue';
 
     const schema = yup.object({
         email: yup.string().required('Please provide a email').email('Please provide a valid email'),
@@ -83,4 +94,21 @@
         });
         // alert(JSON.stringify(values, null, 2));
     }
+
+    const shouldAddClass = ref(false);
+
+    const handleScroll = () => {
+        shouldAddClass.value = window.scrollY > 0 && window.innerWidth > 992;
+    };
+
+    onMounted(() => {
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleScroll);
+        handleScroll();
+    });
+
+    onUnmounted(() => {
+        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener('resize', handleScroll);
+    });
 </script>

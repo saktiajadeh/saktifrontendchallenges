@@ -188,13 +188,17 @@ $gradientSecondary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     }
 }
 
+.bg-gradientPrimary {
+    background: $gradientPrimary;
+}
+
 .container {
     margin: auto;
     max-width: 315px;
     transition: $secondaryTransition;
 }
 
-.wrapper{
+.wrapper {
     font-family: 'Josefin Sans', $font-family-system;
     overflow: hidden;
     min-height: 100dvh;
@@ -206,9 +210,11 @@ $gradientSecondary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     margin: auto;
 }
 
-.header__wrapper{
+.header__wrapper {
     padding: 30px 20px;
-    img{
+    transition: $thirdTransition;
+
+    img {
         max-width: 106px;
         height: 22px;
         object-fit: contain;
@@ -221,7 +227,7 @@ $gradientSecondary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     flex-wrap: wrap;
 }
 
-.main__hero{
+.main__hero {
     transition: $secondaryTransition;
 }
 
@@ -235,10 +241,10 @@ $gradientSecondary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
         height: 100%;
         object-fit: cover;
         object-position: center top;
-        &.img-mobile{
-            
-        }
-        &.img-desktop{
+
+        &.img-mobile {}
+
+        &.img-desktop {
             display: none;
         }
     }
@@ -248,7 +254,7 @@ $gradientSecondary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    padding: 0 20px 20px 20px;
+    padding: 0 20px 30px 20px;
 }
 
 .main__content__title {
@@ -260,7 +266,8 @@ $gradientSecondary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     text-align: center;
     letter-spacing: 9px;
     color: $DarkGrayishRed;
-    .accent{
+
+    .accent {
         font-weight: 300;
         color: $DesaturatedRed;
     }
@@ -275,9 +282,10 @@ $gradientSecondary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     color: $DesaturatedRed;
 }
 
-.main__content__form{
+.main__content__form {
     margin-top: 28px;
-    .error-block{
+
+    .error-block {
         padding: 10px 10px 10px 27px;
         display: block;
         font-size: 13px;
@@ -285,12 +293,13 @@ $gradientSecondary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     }
 }
 
-.main__content__form_group{
+.main__content__form_group {
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    > input{
+
+    >input {
         background-color: transparent;
         border: 1px solid $DesaturatedRed;
         border-radius: 20px;
@@ -299,14 +308,16 @@ $gradientSecondary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
         width: 100%;
         font-family: 'Josefin Sans', $font-family-system;
         transition: $secondaryTransition;
+
         // &:focus-visible{
         //     outline-color: $DesaturatedRed;
         // }
-        &::placeholder{
+        &::placeholder {
             color: $DesaturatedRed;
         }
     }
-    .icon-error{
+
+    .icon-error {
         position: absolute;
         right: 65px;
         margin-right: 10px;
@@ -315,11 +326,13 @@ $gradientSecondary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
         align-items: center;
         justify-content: center;
         color: red;
-        i{
+
+        i {
             display: flex;
         }
     }
-    #btnSubmit{
+
+    #btnSubmit {
         cursor: pointer;
         position: absolute;
         right: 0;
@@ -333,11 +346,13 @@ $gradientSecondary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
         align-items: center;
         justify-content: center;
         transition: $secondaryTransition;
-        i{
+
+        i {
             display: flex;
             font-size: 22px;
         }
-        &:focus-visible{
+
+        &:focus-visible {
             outline-offset: 2px;
         }
     }
@@ -347,91 +362,100 @@ $gradientSecondary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     .container {
         max-width: 498px;
     }
-    
-    .wrapper{
+
+    .wrapper {
         max-width: none;
-        margin-right: auto;
-        margin: 0;
-        width: 57.6%;
     }
-    
-    .header__wrapper{
-        margin-top: 35px;
-        img{
+
+    .header__wrapper {
+        padding: 65px 20px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        margin-right: 42.4%;
+
+        img {
             max-width: 154px;
             height: 32px;
         }
     }
-    
+
     .main__wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
     }
 
-    .main__hero{
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        background: red;
-        height: 100%;
-        width: 42.4%;
+    .main__hero {
+        min-width: 42.4%;
+        min-height: 100dvh;
+        position: relative;
     }
-    
+
     .main__hero__wrapimage {
+        position: absolute;
+        width: 100%;
         height: 100%;
+
         img {
-            &.img-mobile{
+            &.img-mobile {
                 display: none;
             }
-            &.img-desktop{
+
+            &.img-desktop {
                 display: block;
             }
         }
     }
-    
+
     .main__content {
+        width: 100%;
+        padding-top: 196px;
     }
-    
+
     .main__content__title {
-        margin-top: 102px;
+        margin-top: 0;
         font-size: 67px;
         text-align: left;
         letter-spacing: 15px;
-        .accent{
-        }
+
+        .accent {}
     }
-    
+
     .main__content__description {
         margin-top: 27px;
         font-size: 16px;
         line-height: 165%;
         text-align: left;
     }
-    
-    .main__content__form{
+
+    .main__content__form {
         margin-top: 42px;
-        .error-block{
-        }
+
+        .error-block {}
     }
-    
-    .main__content__form_group{
-        > input{
+
+    .main__content__form_group {
+        >input {
             padding: 10px 137px 10px 27px;
             min-height: 56px;
             font-size: 15px;
-            &::placeholder{
-            }
+
+            &::placeholder {}
         }
-        .icon-error{
+
+        .icon-error {
             right: 100px;
-            i{
-            }
+
+            i {}
         }
-        #btnSubmit{
+
+        #btnSubmit {
             min-width: 100px;
-            i{
-            }
-            &:focus-visible{
-            }
+
+            i {}
+
+            &:focus-visible {}
         }
     }
 }
