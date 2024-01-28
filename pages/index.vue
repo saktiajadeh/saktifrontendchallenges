@@ -141,5 +141,10 @@
             url: "/019-base-apparel-coming-soon",
             imageUrl: '/challenge-assets/019-base-apparel-coming-soon/design/desktop-preview.jpg',
         },
+        {
+            title: '020 Intro component with sign-up form',
+            url: "/020-intro-component-with-signup-form",
+            imageUrl: '/challenge-assets/020-intro-component-with-signup-form/design/desktop-preview.jpg',
+        },
     ]);
 </script>
